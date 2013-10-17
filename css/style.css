@@ -984,6 +984,18 @@ w #documentSettings form select:hover {
 #pageDescCharsRemain.limit {
   color: #e42d2a;
 }
+#rte {
+  *zoom: 1;
+  clear: both;
+}
+#rte:before,
+#rte:after {
+  content: " ";
+  display: table;
+}
+#rte:after {
+  clear: both;
+}
 #rte img {
   max-width: 100%;
 }
