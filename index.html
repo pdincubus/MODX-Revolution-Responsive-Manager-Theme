@@ -30,9 +30,16 @@
                 </form>
 
                 <nav>
-                    <ul>
+                    <ul class="siteNav">
                         <li>
-                            <i class="icon-bell"></i> 0 alerts
+                            <i class="icon-globe"></i> Site
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
                         </li>
                         <li>
                             <i class="icon-camera-retro"></i> Media
@@ -64,8 +71,14 @@
                                 <li><a href="#">item</a></li>
                             </ul>
                         </li>
+                    </ul>
+
+                    <ul class="userNav">
                         <li>
-                            <i class="icon-question-sign"></i> Help
+                            <i class="icon-bell"></i> 0 alerts
+                        </li>
+                        <li>
+                            <i class="icon-wrench"></i> Settings
                             <ul>
                                 <li><a href="#">item</a></li>
                                 <li><a href="#">item</a></li>
@@ -74,17 +87,7 @@
                                 <li><a href="#">item</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <i class="icon-cogs"></i> Settings
-                            <ul>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                        <li>
+                        <li class="user">
                             <i class="icon-caret-down"></i> Dave Smith (admin)
                             <img src="img/avatar.png" alt="Dave Smith (admin)'s Gravatar">
                             <ul>
@@ -258,15 +261,15 @@
 
                 <nav class="controlsNav">
                     <ul>
-                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i></a></li>
-                        <li><a href="#" title="New weblink"><i class="icon-link"></i></a></li>
-                        <li><a href="#" title="New symlink"><i class="icon-copy"></i></a></li>
-                        <li><a href="#" title="New static resource"><i class="icon-file-text-alt"></i></a></li>
-                        <li><a href="#" title="Permanently remove deleted resources"><i class="icon-trash"></i></a></li>
+                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i> New document</a></li>
+                        <li><a href="#" title="New weblink"><i class="icon-link"></i> New weblink</a></li>
+                        <li><a href="#" title="New symlink"><i class="icon-copy"></i> New symlink</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-file-text-alt"></i> New static file</a></li>
+                        <li><a href="#" title="Permanently remove deleted resources"><i class="icon-trash"></i> Empty bin</a></li>
                     </ul>
                 </nav>
 
-                <ul class="tree resources">
+                <ul class="tree" id="contentTree">
                     <li>
                         <nav>
                             <h1>
@@ -328,7 +331,7 @@
                     </li>
                 </ul>
 
-                <ul class="tree templates">
+                <ul class="tree" id="templatesTree">
                     <li class="closed">
                         <nav>
                             <h1>
@@ -349,7 +352,7 @@
                         </ul>
                     </li>
 
-                    <li>
+                    <li class="closed">
                         <nav>
                             <h1>
                                 <i class="icon-th-large"></i>

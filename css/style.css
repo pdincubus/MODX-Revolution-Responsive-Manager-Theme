@@ -347,7 +347,7 @@ h6 {
   margin: 0 0 10px 0;
 }
 h1 {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 20px;
 }
 body {
@@ -412,11 +412,11 @@ header > div:after {
   clear: both;
 }
 .transitions {
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 body {
   color: #333333;
@@ -440,7 +440,7 @@ header > div .modxLogo {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 79px;
+  width: 31px;
   height: 30px;
   background-color: transparent;
   background-image: url('../img/logo.png');
@@ -459,16 +459,16 @@ header > div > form {
 header > div > form > input {
   background-color: #e1e1e1;
   height: 30px;
-  width: 170px;
+  width: 218px;
   padding: 0px 10px 0 10px;
   border: 1px solid #e1e1e1;
   margin: 0;
   float: left;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 header > div > form > input:hover {
   background-color: #ededed;
@@ -488,11 +488,11 @@ header > div > form > button {
   margin: 0;
   padding: 0;
   float: left;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 header > div > form > button:hover {
   background-color: #0b6d94;
@@ -505,10 +505,18 @@ header > div > nav {
   margin-right: 10px;
   margin-left: 20px;
   height: 50px;
+  max-width: 790px;
+  width: 70.53571428571429%;
 }
 header > div > nav > ul {
   margin: 0;
   padding: 0;
+}
+header > div > nav > ul.siteNav {
+  float: left;
+}
+header > div > nav > ul.userNav {
+  float: right;
 }
 header > div > nav > ul > li {
   float: left;
@@ -520,9 +528,19 @@ header > div > nav > ul > li {
   position: relative;
   cursor: default;
   border-left: 1px solid #EEEEEE;
+  border-right: 1px solid transparent;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
-header > div > nav > ul > li:last-child {
-  padding-right: 0;
+header > div > nav > ul > li:hover {
+  background-color: #FFFFFF;
+}
+header > div > nav > ul > li.user > ul {
+  right: -1px;
+  left: auto;
 }
 header > div > nav > ul > li img {
   vertical-align: bottom;
@@ -535,35 +553,41 @@ header > div > nav > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 header > div > nav > ul > li a:hover {
   background: #ededed;
 }
 header > div > nav > ul > li > ul {
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 50px;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-  background-color: #fafafa;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  background-color: #FFFFFF;
   -webkit-opacity: 0;
   -khtml-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
   z-index: -1;
   width: 200px;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-  -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
 }
 header > div > nav > ul > li > ul > li a {
   padding: 5px 10px;
+}
+header > div > nav > ul > li:hover {
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
 }
 header > div > nav > ul > li:hover > ul {
   -webkit-opacity: 1;
@@ -604,11 +628,11 @@ main > article {
   height: 40px;
   display: inline-block;
   margin-left: 10px;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 .button i {
   margin-left: 5px;
@@ -650,7 +674,7 @@ nav.tabNav > ul > li {
   float: left;
 }
 nav.tabNav > ul > li > a {
-  padding: 7px 10px 0 10px;
+  padding: 7px 15px 0 15px;
   height: 39px;
   line-height: 20px;
   text-align: center;
@@ -660,11 +684,11 @@ nav.tabNav > ul > li > a {
   font-size: 12px;
   display: block;
   text-decoration: none;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 nav.tabNav > ul > li > a:hover {
   background-color: #FDFDFD;
@@ -713,21 +737,39 @@ nav.controlsNav > ul > li {
 }
 nav.controlsNav > ul > li:last-child {
   float: right;
-  margin-left: 20px;
+  margin-left: 5px;
   margin-right: 0;
+}
+nav.controlsNav > ul > li:last-child a {
+  position: relative;
+  padding-left: 20px;
+  width: 0;
+}
+nav.controlsNav > ul > li:last-child a i {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+nav.controlsNav > ul > li:last-child a:hover {
+  width: 90px;
 }
 nav.controlsNav > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  width: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  font-size: 12px;
 }
 nav.controlsNav > ul > li a:hover {
-  color: #999999;
+  color: #0f90c3;
+  width: 95px;
 }
 ul.tree {
   margin: 0;
@@ -745,11 +787,11 @@ ul.tree > li > nav {
   padding: 10px 10px 0 10px;
   border-bottom: 1px solid #FFFFFF;
   *zoom: 1;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
   cursor: pointer;
 }
 ul.tree > li > nav:before,
@@ -767,6 +809,7 @@ ul.tree > li > nav h1 {
   font-size: 14px;
   line-height: 20px;
   float: left;
+  width: 72.3076923076923%;
 }
 ul.tree > li > nav h1 i {
   margin-right: 5px;
@@ -793,11 +836,11 @@ ul.tree > li > nav ul.treeSectionControls li a {
   text-decoration: none;
   color: #FFFFFF;
   display: block;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 ul.tree > li > nav ul.treeSectionControls li a:hover {
   color: #cccccc;
@@ -814,11 +857,11 @@ ul.tree > li > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
 }
 ul.tree > li > ul > li a i {
   margin-right: 5px;
@@ -854,6 +897,7 @@ ul.tree > li > ul > li > ul > li {
   float: left;
   margin-bottom: 10px;
   margin-top: 10px;
+  margin-left: 10px;
 }
 #documentSettings {
   padding: 10px;
@@ -883,11 +927,11 @@ ul.tree > li > ul > li > ul > li {
   border: 1px solid #CCCCCC;
   padding: 10px;
   background-color: #FFFFFF;
-  -webkit-transition: 0.2s all ease-in-out;
-  -moz-transition: 0.2s all ease-in-out;
-  -ms-transition: 0.2s all ease-in-out;
-  -o-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
   font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
   font-size: 18px;
 }
@@ -905,6 +949,10 @@ w #documentSettings form select:hover {
 #documentSettings form textarea {
   height: 100px;
   font-size: 14px;
+  resize: none;
+}
+#documentSettings form textarea#pageDescription {
+  padding-right: 50px;
 }
 #documentSettings form select {
   -webkit-appearance: none;
@@ -922,10 +970,22 @@ w #documentSettings form select:hover {
   line-height: 20px;
   cursor: pointer;
 }
-#documentSettings form .checkboxes p {
+#documentSettings form .checkboxes {
   *zoom: 1;
   width: 50%;
   float: left;
+}
+#documentSettings form .checkboxes:before,
+#documentSettings form .checkboxes:after {
+  content: " ";
+  display: table;
+}
+#documentSettings form .checkboxes:after {
+  clear: both;
+}
+#documentSettings form .checkboxes p {
+  *zoom: 1;
+  margin-bottom: 10px;
 }
 #documentSettings form .checkboxes p:before,
 #documentSettings form .checkboxes p:after {
@@ -974,12 +1034,12 @@ w #documentSettings form select:hover {
 }
 #pageDescCharsRemain {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 34px;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
   color: #CCCCCC;
   background-color: #FFFFFF;
-  line-height: 34px;
+  line-height: 20px;
 }
 #pageDescCharsRemain.limit {
   color: #e42d2a;
