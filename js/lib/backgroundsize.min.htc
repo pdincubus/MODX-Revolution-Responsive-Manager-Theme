@@ -1,0 +1,723 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>background-size-polyfill/backgroundsize.min.htc at gh-pages · louisremi/background-size-polyfill</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe126-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 2.0.0p247-github5 (2013-06-27) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="c6e721f5-4d6a-440e-aaca-069f76091e1e" name="octolytics-dimension-request_id" /><meta content="1576709" name="octolytics-actor-id" /><meta content="pdincubus" name="octolytics-actor-login" /><meta content="ac230b76fdb2cea5a7b443fd98760c9a3325a8a0dbb4f896631ad4a5bda53d9e" name="octolytics-actor-hash" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="ooJBv8pGMmJ5MwplXv+TvHUZv+LMdkNQz8po1XCYbmY=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-1571e8531c9d48a5e17e976e56fb9f29b8e41cf2.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-4aac1f1fa7a38c2fbe63b6951d4f85decbe92c03.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-f86a2975a82dceee28e5afe598d1ebbfd7109d79.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-a4a7207e7dacc57635e1d9db14d6becb2053fc5f.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="f2d29d78ad073bd72577c94b9109a724">
+
+        <link data-pjax-transient rel='permalink' href='/louisremi/background-size-polyfill/blob/a4225f8865f244c5a8ce08d30d7b4846a3aa4231/backgroundsize.min.htc'>
+  <meta property="og:title" content="background-size-polyfill"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/louisremi/background-size-polyfill"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="background-size-polyfill - Adds support for background-size &quot;cover&quot; and &quot;contain&quot; to IE8"/>
+
+  <meta name="description" content="background-size-polyfill - Adds support for background-size &quot;cover&quot; and &quot;contain&quot; to IE8" />
+
+  <meta content="39374" name="octolytics-dimension-user_id" /><meta content="louisremi" name="octolytics-dimension-user_login" /><meta content="6778210" name="octolytics-dimension-repository_id" /><meta content="louisremi/background-size-polyfill" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="6778210" name="octolytics-dimension-repository_network_root_id" /><meta content="louisremi/background-size-polyfill" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/louisremi/background-size-polyfill/commits/gh-pages.atom" rel="alternate" title="Recent Commits to background-size-polyfill:gh-pages" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production macintosh vis-public page-blob">
+    <div class="wrapper">
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+    <div class="divider-vertical"></div>
+
+    
+    <a href="/notifications" class="notification-indicator tooltipped downwards" data-gotokey="n" title="You have no unread notifications">
+        <span class="mail-status all-read"></span>
+</a>    <div class="divider-vertical"></div>
+
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    data-username="pdincubus"
+      data-repo="louisremi/background-size-polyfill"
+      data-branch="gh-pages"
+      data-sha="1d677921327ab9cbad2285357dcde9f6d9de108f"
+  >
+
+    <input type="hidden" name="nwo" value="louisremi/background-size-polyfill" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="/pdincubus" class="name">
+        <img height="20" src="https://1.gravatar.com/avatar/19347e1ce187d15b8c631f06b04e525f?d=https%3A%2F%2Fidenticons.github.com%2F95f907dd3a038d8498ab42eb2c7ba16d.png&amp;s=140" width="20" /> pdincubus
+      </a>
+    </li>
+
+      <li>
+        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a new repo" aria-label="Create a new repo">
+          <span class="octicon octicon-repo-create"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/settings/profile" id="account_settings"
+          class="tooltipped downwards"
+          aria-label="Account settings "
+          title="Account settings ">
+          <span class="octicon octicon-tools"></span>
+        </a>
+      </li>
+      <li>
+        <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" title="Sign out" aria-label="Sign out">
+          <span class="octicon octicon-log-out"></span>
+        </a>
+      </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+
+    <li class="section-title">
+      <span title="louisremi/background-size-polyfill">This repository</span>
+    </li>
+    <li>
+      <a href="/louisremi/background-size-polyfill/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+    </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="ooJBv8pGMmJ5MwplXv+TvHUZv+LMdkNQz8po1XCYbmY=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="6778210" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+        <a class="social-count js-social-count" href="/louisremi/background-size-polyfill/watchers">
+          23
+        </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-watch"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for discussions in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+  
+<div class="js-toggler-container js-social-container starring-container on">
+  <a href="/louisremi/background-size-polyfill/unstar" class="minibutton with-count js-toggler-target star-button starred upwards" title="Unstar this repo" data-remote="true" data-method="post" rel="nofollow">
+    <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+  </a>
+  <a href="/louisremi/background-size-polyfill/star" class="minibutton with-count js-toggler-target star-button unstarred upwards" title="Star this repo" data-remote="true" data-method="post" rel="nofollow">
+    <span class="octicon octicon-star"></span><span class="text">Star</span>
+  </a>
+  <a class="social-count js-social-count" href="/louisremi/background-size-polyfill/stargazers">307</a>
+</div>
+
+  </li>
+
+
+        <li>
+          <a href="/louisremi/background-size-polyfill/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="/louisremi/background-size-polyfill/network" class="social-count">84</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/louisremi" class="url fn" itemprop="url" rel="author"><span itemprop="title">louisremi</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/louisremi/background-size-polyfill" class="js-current-repository js-repo-home-link">background-size-polyfill</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container ">
+
+        <div class="repository-sidebar">
+            
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/louisremi/background-size-polyfill" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /louisremi/background-size-polyfill">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/louisremi/background-size-polyfill/issues" aria-label="Issues" class="js-selected-navigation-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /louisremi/background-size-polyfill/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>7</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/louisremi/background-size-polyfill/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /louisremi/background-size-polyfill/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" title="Wiki">
+          <a href="/louisremi/background-size-polyfill/wiki" aria-label="Wiki" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_wiki /louisremi/background-size-polyfill/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/louisremi/background-size-polyfill/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /louisremi/background-size-polyfill/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/louisremi/background-size-polyfill/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /louisremi/background-size-polyfill/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/louisremi/background-size-polyfill/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /louisremi/background-size-polyfill/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/louisremi/background-size-polyfill.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/louisremi/background-size-polyfill.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:louisremi/background-size-polyfill.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:louisremi/background-size-polyfill.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/louisremi/background-size-polyfill" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/louisremi/background-size-polyfill" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+  <a href="github-mac://openRepo/https://github.com/louisremi/background-size-polyfill" class="minibutton sidebar-button">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="/louisremi/background-size-polyfill/archive/gh-pages.zip"
+                   class="minibutton sidebar-button"
+                   title="Download this repository as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+
+<!-- blob contrib key: blob_contributors:v21:f992daa83151d5c8f62be4f67c72c311 -->
+<!-- blob contrib frag key: views10/v8/blob_contributors:v21:f992daa83151d5c8f62be4f67c72c311 -->
+
+<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+<a href="/louisremi/background-size-polyfill/find/gh-pages" data-pjax data-hotkey="t" style="display:none">Show File Finder</a>
+
+<div class="file-navigation">
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="gh-pages"
+    data-ref="gh-pages"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">gh-pages</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/louisremi/background-size-polyfill/blob/gh-pages/backgroundsize.min.htc" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="gh-pages" data-skip-pjax="true" rel="nofollow" title="gh-pages">gh-pages</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/louisremi/background-size-polyfill/blob/master/backgroundsize.min.htc" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" data-skip-pjax="true" rel="nofollow" title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/louisremi/background-size-polyfill/tree/0.2.0/backgroundsize.min.htc" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.2.0" data-skip-pjax="true" rel="nofollow" title="0.2.0">0.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/louisremi/background-size-polyfill/tree/0.1.0/backgroundsize.min.htc" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="0.1.0" data-skip-pjax="true" rel="nofollow" title="0.1.0">0.1.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/louisremi/background-size-polyfill" data-branch="gh-pages" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">background-size-polyfill</span></a></span></span><span class="separator"> / </span><strong class="final-path">backgroundsize.min.htc</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="backgroundsize.min.htc" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+  
+  <div class="commit file-history-tease">
+    <img class="main-avatar" height="24" src="https://0.gravatar.com/avatar/58121768c90886ccb1f6be62058366c0?d=https%3A%2F%2Fidenticons.github.com%2F9649320310f29eb3ccdbdefbb193cffe.png&amp;s=140" width="24" />
+    <span class="author"><a href="/jefferyto" rel="author">jefferyto</a></span>
+    <time class="js-relative-date" datetime="2013-08-27T08:53:03-07:00" title="2013-08-27 08:53:03">August 27, 2013</time>
+    <div class="commit-title">
+        <a href="/louisremi/background-size-polyfill/commit/9409f04cb5509b553f1d30893473f7af60021031" class="message" data-pjax="true" title="bump version">bump version</a>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>2</strong> contributors</a></p>
+          <a class="avatar tooltipped downwards" title="jefferyto" href="/louisremi/background-size-polyfill/commits/gh-pages/backgroundsize.min.htc?author=jefferyto"><img height="20" src="https://0.gravatar.com/avatar/58121768c90886ccb1f6be62058366c0?d=https%3A%2F%2Fidenticons.github.com%2F9649320310f29eb3ccdbdefbb193cffe.png&amp;s=140" width="20" /></a>
+    <a class="avatar tooltipped downwards" title="yatil" href="/louisremi/background-size-polyfill/commits/gh-pages/backgroundsize.min.htc?author=yatil"><img height="20" src="https://1.gravatar.com/avatar/5eebf017e9ef222fd106d72a93bc00d7?d=https%3A%2F%2Fidenticons.github.com%2Ff1728a9a189d57bac75fc58ee722781a.png&amp;s=140" width="20" /></a>
+
+
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+        <li class="facebox-user-list-item">
+          <img height="24" src="https://0.gravatar.com/avatar/58121768c90886ccb1f6be62058366c0?d=https%3A%2F%2Fidenticons.github.com%2F9649320310f29eb3ccdbdefbb193cffe.png&amp;s=140" width="24" />
+          <a href="/jefferyto">jefferyto</a>
+        </li>
+        <li class="facebox-user-list-item">
+          <img height="24" src="https://1.gravatar.com/avatar/5eebf017e9ef222fd106d72a93bc00d7?d=https%3A%2F%2Fidenticons.github.com%2Ff1728a9a189d57bac75fc58ee722781a.png&amp;s=140" width="24" />
+          <a href="/yatil">yatil</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div id="files" class="bubble">
+  <div class="file">
+    <div class="meta">
+      <div class="info">
+        <span class="icon"><b class="octicon octicon-file-text"></b></span>
+        <span class="mode" title="File Mode">file</span>
+          <span>13 lines (12 sloc)</span>
+        <span>5.768 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+                <a class="minibutton tooltipped leftwards"
+                   title="Clicking this button will automatically fork this project so you can edit the file"
+                   href="/louisremi/background-size-polyfill/edit/gh-pages/backgroundsize.min.htc"
+                   data-method="post" rel="nofollow">Edit</a>
+          <a href="/louisremi/background-size-polyfill/raw/gh-pages/backgroundsize.min.htc" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/louisremi/background-size-polyfill/blame/gh-pages/backgroundsize.min.htc" class="button minibutton ">Blame</a>
+          <a href="/louisremi/background-size-polyfill/commits/gh-pages/backgroundsize.min.htc" class="button minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+            <a class="minibutton danger empty-icon tooltipped downwards"
+               href="/louisremi/background-size-polyfill/delete/gh-pages/backgroundsize.min.htc"
+               title="Fork this project and delete file"
+               data-method="post" data-test-id="delete-blob-file" rel="nofollow">
+            Delete
+          </a>
+      </div><!-- /.actions -->
+
+    </div>
+        <div class="blob-wrapper data type-text js-blob-data">
+        <table class="file-code file-diff">
+          <tr class="file-code-line">
+            <td class="blob-line-nums">
+              <span id="L1" rel="#L1">1</span>
+<span id="L2" rel="#L2">2</span>
+<span id="L3" rel="#L3">3</span>
+<span id="L4" rel="#L4">4</span>
+<span id="L5" rel="#L5">5</span>
+<span id="L6" rel="#L6">6</span>
+<span id="L7" rel="#L7">7</span>
+<span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
+<span id="L11" rel="#L11">11</span>
+<span id="L12" rel="#L12">12</span>
+
+            </td>
+            <td class="blob-line-code">
+                    <div class="highlight"><pre><div class='line' id='LC1'>&lt;!-- background-size-polyfill v0.2.0 | (c) 2012-2013 Louis-Rémi Babé | MIT License --&gt;</div><div class='line' id='LC2'>&lt;PUBLIC:COMPONENT lightWeight=&quot;true&quot;&gt;</div><div class='line' id='LC3'>&lt;PUBLIC:ATTACH EVENT=&quot;oncontentready&quot; ONEVENT=&quot;o.init()&quot; /&gt;</div><div class='line' id='LC4'>&lt;PUBLIC:ATTACH EVENT=&quot;ondocumentready&quot; ONEVENT=&quot;o.init()&quot; /&gt;</div><div class='line' id='LC5'>&lt;PUBLIC:ATTACH EVENT=&quot;onpropertychange&quot; ONEVENT=&quot;o.handlePropertychange()&quot; /&gt;</div><div class='line' id='LC6'>&lt;PUBLIC:ATTACH EVENT=&quot;ondetach&quot; ONEVENT=&quot;o.restore()&quot; /&gt;</div><div class='line' id='LC7'>&lt;PUBLIC:ATTACH EVENT=&quot;onresize&quot; FOR=&quot;window&quot; ONEVENT=&quot;o.handleResize()&quot; /&gt;</div><div class='line' id='LC8'>&lt;PUBLIC:EVENT NAME=&quot;onbackgroundupdate&quot; ID=&quot;updateEvent&quot; /&gt;</div><div class='line' id='LC9'>&lt;script type=&quot;text/javascript&quot;&gt;</div><div class='line' id='LC10'>var o;!function(a,b){var c=/url\([&quot;&#39;]?(.*?)[&quot;&#39;]?\)/,d=/^\s\s*/,e=/\s\s*$/,f=/\s\s*/g,g=/%$/,h={top:0,left:0,bottom:1,right:1,center:.5},i=a.document,j=&quot;data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==&quot;,k=&quot;background-size-polyfill&quot;,l=function(){},m=100,n,p,q,r;function s(){var b=i.createElement(&quot;div&quot;),c=i.createElement(&quot;img&quot;),d=b.style,e=a.style,f=a.currentStyle,g=a.bgsExpando,h=a.firstChild;g&amp;&amp;(g.restore&amp;&amp;(e.backgroundImage=g.restore.backgroundImage,e.position=g.restore.position,e.zIndex=g.restore.zIndex),h&amp;&amp;&quot;DIV&quot;===(h.nodeName||&quot;&quot;).toUpperCase()&amp;&amp;h.className===k&amp;&amp;a.removeChild(h)),t(b),b.className=k,d.top=d.right=d.bottom=d.left=0,d.position=&quot;fixed&quot;,t(c),c.alt=&quot;&quot;,b.appendChild(c),a.insertBefore(b,a.firstChild),a.bgsExpando=g={wrapper:b,img:c,restore:{backgroundImage:e.backgroundImage,position:e.position,zIndex:e.zIndex},current:{},next:null,processing:!1,loadImg:null,display:!1,changed:!1,ignore:!1,canFixed:&quot;BODY&quot;===a.nodeName.toUpperCase()&amp;&amp;b.offsetHeight&gt;0},d.position=&quot;absolute&quot;,&quot;auto&quot;===f.zIndex&amp;&amp;(e.zIndex=0),&quot;static&quot;===f.position&amp;&amp;(e.position=&quot;relative&quot;),o={init:l,handlePropertychange:D,restore:F,handleResize:E},D()}function t(a){var b=a.style;b.position=&quot;absolute&quot;,b.display=&quot;block&quot;,b.zIndex=-1,b.overflow=&quot;hidden&quot;,b.visibility=&quot;inherit&quot;,b.width=b.height=b.top=b.right=b.bottom=b.left=b.cursor=&quot;auto&quot;,b.margin=b.padding=b.border=b.outline=b.minWidth=b.minHeight=0,b.background=b.maxWidth=b.maxHeight=&quot;none&quot;,b.fontSize=b.lineHeight=&quot;1em&quot;}function u(a,c,d){var e;c?(e=i.createElement(&quot;img&quot;),e.onload=e.onerror=function(){var c=this.width,e=this.height;&quot;error&quot;===b.event.type&amp;&amp;(c=e=0),a.loadImg=this.onload=this.onerror=null,d(c,e)},e.src=c):e={callbackId:b.setTimeout(function(){a.loadImg=null,d(0,0)},0)},a.loadImg=e,e=null}function v(a){var b=o.handlePropertychange;o.handlePropertychange=l,a(),o.handlePropertychange=b}function w(a,b){var c=a.currentStyle.display;return c!==b.display&amp;&amp;(b.display=c,b.changed=!0),&quot;none&quot;!==c}function x(a,b){var d=a.style,e=a.currentStyle,f=b.restore,i=y(e[&quot;background-size&quot;]),k=i.split(&quot; &quot;),l={innerWidth:a.offsetWidth-(parseFloat(e.borderLeftWidth)||0)-(parseFloat(e.borderRightWidth)||0),innerHeight:a.offsetHeight-(parseFloat(e.borderTopWidth)||0)-(parseFloat(e.borderBottomWidth)||0),size:i,sizeIsKeyword:&quot;contain&quot;===i||&quot;cover&quot;===i,sizeX:k[0],sizeY:k.length&gt;1?k[1]:&quot;auto&quot;,posX:e.backgroundPositionX,posY:e.backgroundPositionY,attachment:e.backgroundAttachment,src:&quot;&quot;,imgWidth:0,imgHeight:0};return l.sizeIsKeyword||((parseFloat(l.sizeX)&gt;=0||&quot;auto&quot;===l.sizeX)&amp;&amp;(parseFloat(l.sizeY)&gt;=0||&quot;auto&quot;===l.sizeY)||(l.sizeX=l.sizeY=&quot;auto&quot;),g.test(l.sizeX)&amp;&amp;(l.sizeX=(l.innerWidth*parseFloat(l.sizeX)/100||0)+&quot;px&quot;),g.test(l.sizeY)&amp;&amp;(l.sizeY=(l.innerHeight*parseFloat(l.sizeY)/100||0)+&quot;px&quot;)),(l.posX in h||g.test(l.posX))&amp;&amp;(l.posX=h[l.posX]||parseFloat(l.posX)/100||0),(l.posY in h||g.test(l.posY))&amp;&amp;(l.posY=h[l.posY]||parseFloat(l.posY)/100||0),(c.exec(d.backgroundImage)||[])[1]===j?v(function(){d.backgroundImage=f.backgroundImage}):f.backgroundImage=d.backgroundImage,l.src=(c.exec(e.backgroundImage)||[])[1],v(function(){d.backgroundImage=&quot;url(&quot;+j+&quot;)&quot;}),l}function y(a){return String(a).replace(d,&quot;&quot;).replace(e,&quot;&quot;).replace(f,&quot; &quot;)}function z(a,c){var d=c.next;function e(){p=b.setTimeout(function(){c.processing=!1,z(a,c)},0)}!c.processing&amp;&amp;d&amp;&amp;(c.next=null,c.processing=!0,u(c,d.src,function(b,f){d.imgWidth=b,d.imgHeight=f,A(c,d)?B(a,c,d,e):e()}))}function A(a,b){var c=a.current,d=!1,e;if(a.changed)a.changed=!1,d=!0;else for(e in b)if(b[e]!==c[e]){d=!0;break}return d}function B(a,c,d,e){var f=c.img,g=f.style,h=d.size,i=d.innerWidth,j=d.innerHeight,k=d.imgWidth,l=d.imgHeight,m=d.posX,n=d.posY,o=&quot;number&quot;==typeof m,p=&quot;number&quot;==typeof n,s=&quot;none&quot;,t=0,u=0,v=&quot;auto&quot;,w=&quot;auto&quot;,x=&quot;px&quot;,y=&quot;100%&quot;,z,A;i&amp;&amp;j&amp;&amp;k&amp;&amp;l&amp;&amp;(c.wrapper.style.position=&quot;fixed&quot;===d.attachment&amp;&amp;c.canFixed?&quot;fixed&quot;:&quot;absolute&quot;,f.src=d.src,d.sizeIsKeyword?(z=i/j,A=k/l,&quot;contain&quot;===h&amp;&amp;A&gt;z||&quot;cover&quot;===h&amp;&amp;z&gt;A?(u=C((j-i/A)*n)+x,v=y):(t=C((i-j*A)*m)+x,w=y),g.left=o?t:m,g.top=p?u:n,g.width=v,g.height=w,s=&quot;block&quot;):(g.display=&quot;block&quot;,g.width=d.sizeX,g.height=d.sizeY,k=f.width,l=f.height,k&amp;&amp;l&amp;&amp;(g.left=o?C((i-k)*m)+x:m,g.top=p?C((j-l)*n)+x:n,s=&quot;block&quot;))),g.display=s,c.current=d,q=b.setTimeout(function(){r=b.setTimeout(e,0),updateEvent.fire()},0)}function C(a){var b=0&gt;a;return a=Math.floor(Math.abs(a)),b?-a:a}function D(){var c=a.bgsExpando,d=(b.event||{}).propertyName,e=&quot;style.backgroundImage&quot;;c.ignore&amp;&amp;(c.ignore=!1,d===e)||(d===e&amp;&amp;a.style.backgroundImage&amp;&amp;(c.ignore=!0),w(a,c)&amp;&amp;(c.next=x(a,c),z(a,c)))}function E(){b.clearTimeout(n),n=b.setTimeout(D,m)}function F(){var c=a.bgsExpando,d,e,f;o={init:l,handlePropertychange:l,restore:l,handleResize:l},b.clearTimeout(n),b.clearTimeout(p),b.clearTimeout(q),b.clearTimeout(r);try{c&amp;&amp;(d=c.loadImg,d&amp;&amp;(d.onload=d.onerror=null,b.clearTimeout(d.callbackId)),e=a.style,f=c.restore,e&amp;&amp;(e.backgroundImage=f.backgroundImage,e.position=f.position,e.zIndex=f.zIndex),a.removeChild(c.wrapper)),a.bgsExpando=null}catch(g){}a=b=i=l=null}o={init:&quot;print&quot;!==i.media?s:l,handlePropertychange:l,restore:l,handleResize:l},&quot;complete&quot;===a.readyState&amp;&amp;o.init()}(element,window);&lt;/script&gt;</div><div class='line' id='LC11'>&lt;script type=&quot;text/vbscript&quot;&gt;&lt;/script&gt;</div><div class='line' id='LC12'>&lt;/PUBLIC:COMPONENT&gt;</div></pre></div>
+            </td>
+          </tr>
+        </table>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.07474s from github-fe126-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/louisremi/background-size-polyfill/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+    
+  </body>
+</html>
+

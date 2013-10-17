@@ -1,0 +1,30 @@
+//----------------------------------------------------
+//                   iPad portrait
+//----------------------------------------------------
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+    header {
+        height: 100px;
+
+        > div {
+            > nav {
+                float: none;
+                clear: both;
+                margin-left: 0;
+
+                > ul {
+                    > li {
+                        border-left: 0;
+                        border-right: 1px solid #EEEEEE;
+
+                        &:first-child {
+                            position: absolute;
+                            top: -50px;
+                            left: 309px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

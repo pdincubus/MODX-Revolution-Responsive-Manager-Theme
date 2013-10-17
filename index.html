@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>MODX Manager responsive theme</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/lib/modernizr-2.6.2.min.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 9]>
+        <div id="oldIe">
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p>MODX Manager will NOT work adequately in this browser. Seriously.</p>
+        </div>
+        <![endif]-->
+
+        <header id="top">
+            <div>
+                <a href="http://www.modx.com" class="modxLogo">MODX</a>
+
+                <form method="post" action="#">
+                    <input type="text" name="awesomeBar" id="awesomeBar" placeholder="Search">
+                    <button type="submit" title="search"><i class="icon-search"></i></button>
+                </form>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <i class="icon-bell"></i> 0 alerts
+                        </li>
+                        <li>
+                            <i class="icon-camera-retro"></i> Media
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-puzzle-piece"></i> Apps
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-cog"></i> Manage
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-question-sign"></i> Help
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-cogs"></i> Settings
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-caret-down"></i> Dave Smith (admin)
+                            <img src="img/avatar.png" alt="Dave Smith (admin)'s Gravatar">
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main">
+            <article>
+                <section id="resourceEdit">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="button complete">Save <i class="icon-save"></i></a>
+                                <a href="#" class="button action">View <i class="icon-eye-open"></i></a>
+                                <a href="#" class="button action">Duplicate <i class="icon-copy"></i></a>
+                                <a href="#" class="button warning">Delete <i class="icon-trash"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <h1>Resource title</h1>
+
+                    <nav class="tabNav">
+                        <ul>
+                            <li><a href="#documentSettings" class="active">Document</a></li>
+                            <li><a href="#pageExtras">Page extras</a></li>
+                            <li><a href="#pageSettings">Page settings</a></li>
+                            <li><a href="#resourceGroups">Resource groups</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section id="documentSettings">
+                    <form action="#" method="post">
+                        <fieldset class="l">
+                            <p>
+                                <label for="pageTitle">Title</label>
+                                <input type="text" name="pageTitle" id="pageTitle">
+                            </p>
+
+                            <p>
+                                <label for="longTitle">Long title</label>
+                                <input type="text" name="longTitle" id="longTitle">
+                            </p>
+
+                            <p>
+                                <label for="menuTitle">Menu title</label>
+                                <input type="text" name="menuTitle" id="menuTitle">
+                            </p>
+
+                            <p>
+                                <label for="pageDescription">Description</label>
+                                <textarea name="pageDescription" id="pageDescription"></textarea>
+                                <span id="pageDescCharsRemain">160</span>
+                            </p>
+
+                            <p>
+                                <label for="pageIntrotext">Summary</label>
+                                <textarea name="pageIntrotext" id="pageIntrotext"></textarea>
+                            </p>
+                        </fieldset>
+
+                        <fieldset class="r">
+                            <p>
+                                <label for="pageStyle">Page style</label>
+                                <select name="pageStyle" id="pageStyle">
+                                    <option value="1">BaseTemplate</option>
+                                    <option value="2">Homepage</option>
+                                    <option value="3">Article</option>
+                                    <option value="4">ArticleContainer</option>
+                                </select>
+                            </p>
+
+                            <p>
+                                <label for="pageURLAlias">Page URL alias</label>
+                                <input type="text" name="pageURLAlias" id="pageURLAlias">
+                            </p>
+
+                            <p>
+                                <label for="linkAttributes">Link attributes</label>
+                                <input type="text" name="linkAttributes" id="linkAttributes">
+                            </p>
+
+                            <div class="checkboxes l">
+                                <p>
+                                    <input type="checkbox" name="pagePublished" id="pagePublished" checked="checked">
+                                    <label for="pagePublished">Published</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pageHidden" id="pageHidden">
+                                    <label for="pageHidden">Hide from menus</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pageContainer" id="pageContainer">
+                                    <label for="pageContainer">Container</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="richText" id="richText" checked="checked">
+                                    <label for="richText">Rich text</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pageDeleted" id="pageDeleted">
+                                    <label for="pageDeleted">Deleted</label>
+                                </p>
+                            </div>
+
+                            <div class="checkboxes r">
+                                <p>
+                                    <input type="checkbox" name="emptyCache" id="emptyCache">
+                                    <label for="emptyCache">Empty cache</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pageCacheable" id="pageCacheable">
+                                    <label for="pageCacheable">Cacheable</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="pageSearchable" id="pageSearchable">
+                                    <label for="pageContainer">Searchable</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" name="freezeURI" id="freezeURI">
+                                    <label for="freezeURI">Freeze URI</label>
+                                </p>
+                            </div>
+                        </fieldset>
+
+                        <div id="rte">
+                            <img src="img/rte.png" alt="">
+                        </div>
+                    </form>
+                </section>
+
+                <section id="pageExtras">
+
+                </section>
+
+                <section id="pageSettings">
+
+                </section>
+
+                <section id ="resourceGroups">
+
+                </section>
+
+            </article>
+
+            <aside>
+                <nav class="tabNav">
+                    <ul>
+                        <li><a href="#contentTree" class="active">Content</a></li>
+                        <li><a href="#filesTree">Files</a></li>
+                        <li><a href="#templatesTree">Templates</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="controlsNav">
+                    <ul>
+                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i></a></li>
+                        <li><a href="#" title="New weblink"><i class="icon-link"></i></a></li>
+                        <li><a href="#" title="New symlink"><i class="icon-copy"></i></a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-file-text-alt"></i></a></li>
+                        <li><a href="#" title="Permanently remove deleted resources"><i class="icon-trash"></i></a></li>
+                    </ul>
+                </nav>
+
+                <ul class="tree resources">
+                    <li>
+                        <nav>
+                            <h1>
+                                <i class="icon-globe"></i>
+                                Main (web)
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Context settings"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" title="Add resource to this context"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh context view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-file"></i> Home</a></li>
+                            <li><a href="#"><i class="icon-folder-close"></i> Container closed</a></li>
+                            <li>
+                                <a href="#"><i class="icon-folder-open"></i> Container open</a>
+                                <ul>
+                                    <li><a href="#" class="published"><i class="icon-file"></i> Page</a></li>
+                                    <li><a href="#" class="deleted"><i class="icon-file"></i> Page deleted</a></li>
+                                    <li><a href="#" class="noMenu published"><i class="icon-file"></i> Page hidden published</a></li>
+                                    <li><a href="#" class="unpublished"><i class="icon-file-alt"></i> Page unpublished</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="icon-comment"></i> Articles</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-globe"></i>
+                                French (fr)
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Context settings"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" title="Add resource to this context"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh context view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-file"></i> Home</a></li>
+                            <li><a href="#"><i class="icon-folder-close"></i> Container closed</a></li>
+                            <li>
+                                <a href="#"><i class="icon-folder-open"></i> Container open</a>
+                                <ul>
+                                    <li><a href="#" class="published"><i class="icon-file"></i> Page</a></li>
+                                    <li><a href="#" class="deleted"><i class="icon-file"></i> Page deleted</a></li>
+                                    <li><a href="#" class="noMenu published"><i class="icon-file"></i> Page hidden published</a></li>
+                                    <li><a href="#" class="unpublished"><i class="icon-file-alt"></i> Page unpublished</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="icon-comment"></i> Articles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="tree templates">
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-columns"></i>
+                                Templates
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add template"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-columns"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-columns"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-columns"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <nav>
+                            <h1>
+                                <i class="icon-th-large"></i>
+                                Chunks
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add chunk"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-th-large"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-th-large"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-th-large"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-code"></i>
+                                Snippets
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add new snippet"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-code"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-code"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-code"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-magic"></i>
+                                Template variables
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add template variable"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-magic"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-magic"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-magic"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-cog"></i>
+                                Plugins
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add plugin"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-cog"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-folder-close-alt"></i>
+                                Categories
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Add category"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li><a href="#"><i class="icon-folder-close-alt"></i> BaseTemplate</a></li>
+                            <li><a href="#"><i class="icon-folder-close-alt"></i> Homepage</a></li>
+                            <li><a href="#"><i class="icon-folder-close-alt"></i> Article</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/lib/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
