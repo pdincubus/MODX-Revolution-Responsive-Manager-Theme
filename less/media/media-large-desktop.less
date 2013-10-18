@@ -80,6 +80,7 @@ body {
                     padding: 10px;
                     line-height: 16px;
                     border-bottom: 1px solid lighten(@darkgrey, 75%);
+                    .cf;
 
                     &:last-child {
                         border-bottom: 0;
@@ -92,6 +93,9 @@ body {
                         text-align: right;
                         font-size: 11px;
                         line-height: 13px;
+                        float: right;
+                        clear: right;
+                        display: inline-block;
 
                         &:hover {
                             color: darken(@red, 10%);
@@ -99,8 +103,14 @@ body {
                         }
                     }
 
-                    time {
+                    p {
                         clear: both;
+                        margin-bottom: 5px;
+                    }
+
+                    time {
+                        float: left;
+                        clear: left;
                         display: block;
                         color: lighten(@darkgrey, 30%);
                         font-size: 11px;
@@ -277,13 +287,17 @@ footer {
 
         > p {
             margin-bottom: 5px;
+            margin-right: 10px;
             text-align: justify;
             color: lighten(@darkgrey, 30%);
             font-size: 11px;
             .cf;
+            float: right;
+            clear: right;
+            width: (920/1260)*100%;
 
             img {
-                float: right;
+                float: left;
             }
 
             a {

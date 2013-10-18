@@ -587,6 +587,15 @@ header > div > nav > ul > li > ul.alerts li {
   padding: 10px;
   line-height: 16px;
   border-bottom: 1px solid #f2f2f2;
+  *zoom: 1;
+}
+header > div > nav > ul > li > ul.alerts li:before,
+header > div > nav > ul > li > ul.alerts li:after {
+  content: " ";
+  display: table;
+}
+header > div > nav > ul > li > ul.alerts li:after {
+  clear: both;
 }
 header > div > nav > ul > li > ul.alerts li:last-child {
   border-bottom: 0;
@@ -598,13 +607,21 @@ header > div > nav > ul > li > ul.alerts li a {
   text-align: right;
   font-size: 11px;
   line-height: 13px;
+  float: right;
+  clear: right;
+  display: inline-block;
 }
 header > div > nav > ul > li > ul.alerts li a:hover {
   color: #c21b19;
   background-color: transparent;
 }
-header > div > nav > ul > li > ul.alerts li time {
+header > div > nav > ul > li > ul.alerts li p {
   clear: both;
+  margin-bottom: 5px;
+}
+header > div > nav > ul > li > ul.alerts li time {
+  float: left;
+  clear: left;
   display: block;
   color: #808080;
   font-size: 11px;
@@ -668,10 +685,14 @@ footer > div {
 }
 footer > div > p {
   margin-bottom: 5px;
+  margin-right: 10px;
   text-align: justify;
   color: #808080;
   font-size: 11px;
   *zoom: 1;
+  float: right;
+  clear: right;
+  width: 73.01587301587301%;
 }
 footer > div > p:before,
 footer > div > p:after {
@@ -682,7 +703,7 @@ footer > div > p:after {
   clear: both;
 }
 footer > div > p img {
-  float: right;
+  float: left;
 }
 footer > div > p a {
   color: #808080;
@@ -831,6 +852,15 @@ footer > div > nav > ul > li > ul.alerts li {
   padding: 10px;
   line-height: 16px;
   border-bottom: 1px solid #f2f2f2;
+  *zoom: 1;
+}
+footer > div > nav > ul > li > ul.alerts li:before,
+footer > div > nav > ul > li > ul.alerts li:after {
+  content: " ";
+  display: table;
+}
+footer > div > nav > ul > li > ul.alerts li:after {
+  clear: both;
 }
 footer > div > nav > ul > li > ul.alerts li:last-child {
   border-bottom: 0;
@@ -842,13 +872,21 @@ footer > div > nav > ul > li > ul.alerts li a {
   text-align: right;
   font-size: 11px;
   line-height: 13px;
+  float: right;
+  clear: right;
+  display: inline-block;
 }
 footer > div > nav > ul > li > ul.alerts li a:hover {
   color: #c21b19;
   background-color: transparent;
 }
-footer > div > nav > ul > li > ul.alerts li time {
+footer > div > nav > ul > li > ul.alerts li p {
   clear: both;
+  margin-bottom: 5px;
+}
+footer > div > nav > ul > li > ul.alerts li time {
+  float: left;
+  clear: left;
   display: block;
   color: #808080;
   font-size: 11px;
