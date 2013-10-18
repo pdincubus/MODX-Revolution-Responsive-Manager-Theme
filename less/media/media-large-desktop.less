@@ -795,25 +795,41 @@ ul.tree {
             }
         }
 
+        .dropdownatron-container {
+            &:hover {
+                .dropdownatron-select {
+                    color: @darkgrey;
+                }
+            }
+
+            &.shown {
+                .dropdownatron-select {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+
         .dropdownatron-selected {
             cursor: pointer;
         }
 
         .dropdownatron-select {
             position: absolute;
-            top: 14px;
-            right: 10px;
-            width: 10px;
-            height: 18px;
+            top: 10px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
             display: block;
-            color: @darkgrey;
+            color: #CCCCCC;
 
             &:after {
-                content: '';
+                content: '';
                 display: block;
                 font-family: 'FontAwesome';
-                font-size: 14px;
-                line-height: 14px;
+                font-size: 20px;
+                line-height: 20px;
             }
         }
 

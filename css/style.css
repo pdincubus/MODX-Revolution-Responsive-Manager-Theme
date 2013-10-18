@@ -1327,24 +1327,30 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #documentSettings form .dropdownatron-container:hover {
   border-color: #999999;
 }
+#documentSettings form .dropdownatron-container:hover .dropdownatron-select {
+  color: #333333;
+}
+#documentSettings form .dropdownatron-container.shown .dropdownatron-select:after {
+  content: '';
+}
 #documentSettings form .dropdownatron-selected {
   cursor: pointer;
 }
 #documentSettings form .dropdownatron-select {
   position: absolute;
-  top: 14px;
-  right: 10px;
-  width: 10px;
-  height: 18px;
+  top: 10px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
   display: block;
-  color: #333333;
+  color: #CCCCCC;
 }
 #documentSettings form .dropdownatron-select:after {
-  content: '';
+  content: '';
   display: block;
   font-family: 'FontAwesome';
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 20px;
+  line-height: 20px;
 }
 #documentSettings form .dropdownatron-options {
   position: absolute;
