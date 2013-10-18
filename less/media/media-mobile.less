@@ -83,6 +83,8 @@
     }
 
     main {
+        padding: 0;
+
         article, aside {
             float: none;
             clear: both;
@@ -145,8 +147,20 @@
     #documentSettings {
         form {
             .checkboxes {
+                &.l, &.r {
+                    width: auto;
+                    float: none;
+                }
+
                 label {
                     font-size: 12px;
+                }
+            }
+
+            fieldset {
+                &.l, &.r {
+                    width: auto;
+                    float: none;
                 }
             }
         }
@@ -176,22 +190,6 @@
             float: none;
             clear: both;
             width: 100%;
-        }
-    }
-
-    #documentSettings {
-        form {
-            fieldset {
-                width: 100%;
-
-                &.l {
-                    float: none;
-                }
-
-                &.r {
-                    float: none;
-                }
-            }
         }
     }
 }

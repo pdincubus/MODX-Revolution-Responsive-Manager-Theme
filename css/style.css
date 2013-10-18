@@ -585,7 +585,7 @@ header > div > nav > ul > li > ul {
   -moz-opacity: 0;
   opacity: 0;
   z-index: -1;
-  width: 200px;
+  width: 300px;
   border-left: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
@@ -856,7 +856,7 @@ footer > div > nav > ul > li > ul {
   -moz-opacity: 0;
   opacity: 0;
   z-index: -1;
-  width: 200px;
+  width: 300px;
   border-left: 1px solid #CCCCCC;
   border-right: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
@@ -1282,6 +1282,7 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #documentSettings form fieldset {
   border: 0;
   padding: 0;
+  margin: 0;
   width: 47.4025974025974%;
 }
 #documentSettings form fieldset.l {
@@ -1718,6 +1719,9 @@ ul.typeAhead > li span.type {
   ul.tree > li > ul {
     overflow-x: scroll;
   }
+  main {
+    padding: 0;
+  }
   main article,
   main aside {
     float: none;
@@ -1768,8 +1772,18 @@ ul.typeAhead > li span.type {
     padding-left: 10px;
     padding-right: 10px;
   }
+  #documentSettings form .checkboxes.l,
+  #documentSettings form .checkboxes.r {
+    width: auto;
+    float: none;
+  }
   #documentSettings form .checkboxes label {
     font-size: 12px;
+  }
+  #documentSettings form fieldset.l,
+  #documentSettings form fieldset.r {
+    width: auto;
+    float: none;
   }
   ul.tree > li > nav h1 {
     width: 100%;
@@ -1786,15 +1800,6 @@ ul.typeAhead > li span.type {
     float: none;
     clear: both;
     width: 100%;
-  }
-  #documentSettings form fieldset {
-    width: 100%;
-  }
-  #documentSettings form fieldset.l {
-    float: none;
-  }
-  #documentSettings form fieldset.r {
-    float: none;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {

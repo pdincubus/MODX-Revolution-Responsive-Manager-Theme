@@ -27,3 +27,13 @@ Well at the moment, there's the PNG mockup and a bunch of static markup, jQuery,
 Whole point is really to get people talking about it I guess. What do you think to the direction I've gone? What's good? What's bad? What's stupid? What's important? What's not? You get where I'm going.
 
 Let's bash heads and come up with somehting a bit more elegant and thought-out.
+
+##TODO
+
+* Fix dropdownatron to calculate width properly on screen resize/refresh
+* Fix top and bottom menus for mobile devices that can't use the hover menus properly
+* IE testing
+* Windows Firefox/Chrome testing
+* Opera testing
+* iPhone/iPad/Android testing
+* Everything else I've not yet written down.
