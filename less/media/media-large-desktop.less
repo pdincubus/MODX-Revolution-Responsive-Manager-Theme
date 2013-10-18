@@ -536,6 +536,7 @@ nav.controlsNav {
     > ul {
         .cf;
         height: 36px;
+        overflow-x: hidden;
 
         > li {
             float: left;
@@ -544,7 +545,7 @@ nav.controlsNav {
             padding-top: 7px;
             position: relative;
 
-            &:last-child {
+            &.bin {
                 float: right;
                 margin-left: 5px;
                 margin-right: 0;
@@ -582,7 +583,7 @@ nav.controlsNav {
 
                 &:hover {
                     color: @blue;
-                    width: 75px;
+                    width: 65px;
                 }
             }
         }

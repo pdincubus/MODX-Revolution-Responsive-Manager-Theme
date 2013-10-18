@@ -1083,6 +1083,7 @@ nav.controlsNav {
 nav.controlsNav > ul {
   *zoom: 1;
   height: 36px;
+  overflow-x: hidden;
 }
 nav.controlsNav > ul:before,
 nav.controlsNav > ul:after {
@@ -1099,21 +1100,21 @@ nav.controlsNav > ul > li {
   padding-top: 7px;
   position: relative;
 }
-nav.controlsNav > ul > li:last-child {
+nav.controlsNav > ul > li.bin {
   float: right;
   margin-left: 5px;
   margin-right: 0;
 }
-nav.controlsNav > ul > li:last-child a {
+nav.controlsNav > ul > li.bin a {
   padding-left: 20px;
   width: 0;
 }
-nav.controlsNav > ul > li:last-child a i {
+nav.controlsNav > ul > li.bin a i {
   position: absolute;
   right: 0;
   top: 10px;
 }
-nav.controlsNav > ul > li:last-child a:hover {
+nav.controlsNav > ul > li.bin a:hover {
   width: 90px;
 }
 nav.controlsNav > ul > li a {
@@ -1136,7 +1137,7 @@ nav.controlsNav > ul > li a i {
 }
 nav.controlsNav > ul > li a:hover {
   color: #0f90c3;
-  width: 75px;
+  width: 65px;
 }
 ul.tree {
   margin: 0;
