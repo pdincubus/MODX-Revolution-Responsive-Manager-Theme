@@ -25,12 +25,15 @@
                 <a href="http://www.modx.com" class="modxLogo">MODX</a>
 
                 <form method="post" action="#">
-                    <input type="text" name="awesomeBar" id="awesomeBar" placeholder="Search">
+                    <input type="text" name="awesomeBar" class="awesomeBar" id="awesomeBar" placeholder="Search">
                     <button type="submit" title="search"><i class="icon-search"></i></button>
                 </form>
 
                 <nav>
                     <ul class="siteNav">
+                        <li>
+                            <a href="#"><i class="icon-home"></i> Home</a>
+                        </li>
                         <li>
                             <i class="icon-globe"></i> Site
                             <ul>
@@ -649,7 +652,28 @@
         </main>
 
         <footer>
+            <div>
+                <nav>
+                    <form method="post" action="#">
+                        <input type="text" name="awesomeBar" class="awesomeBar" id="awesomeBar2" placeholder="Search">
+                        <button type="submit" title="search"><i class="icon-search"></i></button>
+                    </form>
 
+                    <ul>
+                        <li><i class="icon-question-sign"></i> Help</li>
+                        <li><a href="#">Support forums</a></li>
+                        <li><a href="#">RTFM documentation</a></li>
+                        <li><a href="#">MODX blog</a></li>
+                        <li><a href="#">Issue tracker</a></li>
+                        <li><a href="#">Commercial support</a></li>
+                        <li><a href="#"><i class="icon-github"></i> MODX on GitHub</a></li>
+                    </ul>
+                </nav>
+
+                <p><a href="http://www.modx.com"><img src="img/logo-footer.png"></a></p>
+                <p>The MODX&reg; software you are using is the result of collaboration with an amazing community of users, supporters and developers. Since 2004, the team behind MODX has sponsored and managed it, funding ongoing work through commercial support and commissioned features. You can buy support from the source, to get one hour of emergency support (also usable for two hours non-priority support). Or <a href="mailto:hello@modx.com">email us</a> if you have another question about MODX in general.</p>
+                <p>MODX is free open source software licensed under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL version 2.0</a> or later. Copyright 2004-2013 by MODX, LLC. “MODX” is a registered trademark. Do the right thing - please keep this credit and the other information on this page intact.</p>
+            </div>
         </footer>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

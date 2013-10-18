@@ -2,9 +2,162 @@
 //            big desktop (default) styles
 //----------------------------------------------------
 
+html {
+    background-color: @lightgrey;
+}
+
 body {
     color: @darkgrey;
     background: url(../img/pattern.png) top left repeat;
+}
+
+.navMenuDropDowns() {
+    > li {
+        float: left;
+        display: block;
+        padding: 10px 10px 0 10px;
+        line-height: 30px;
+        margin: 0;
+        height: 50px;
+        position: relative;
+        cursor: default;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid transparent;
+        .transitions();
+
+        &:hover {
+            background-color: #FFFFFF;
+        }
+
+        &.user {
+            > ul {
+                right: -1px;
+                left: auto;
+            }
+        }
+
+        &.alertsMenu {
+            > span {
+                &.unread {
+                    color: @red;
+                }
+            }
+        }
+
+        img {
+            vertical-align: bottom;
+            margin-left: 5px;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        > a {
+            color: @darkgrey;
+            text-decoration: none;
+
+            &:hover {
+
+            }
+        }
+
+        > ul {
+            position: absolute;
+            left: -1px;
+            top: 50px;
+            .transitions;
+            background-color: #FFFFFF;
+            .opacity(0);
+            z-index: -1;
+            width: 200px;
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+            border-bottom: 1px solid #CCCCCC;
+
+            &.alerts {
+                li {
+                    padding: 10px;
+                    line-height: 16px;
+                    border-bottom: 1px solid lighten(@darkgrey, 75%);
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    a {
+                        padding: 0;
+                        color: @red;
+                        border: 0;
+                        text-align: right;
+                        font-size: 11px;
+                        line-height: 13px;
+
+                        &:hover {
+                            color: darken(@red, 10%);
+                            background-color: transparent;
+                        }
+                    }
+
+                    time {
+                        clear: both;
+                        display: block;
+                        color: lighten(@darkgrey, 30%);
+                        font-size: 11px;
+                        line-height: 13px;
+                        text-align: right;
+                    }
+
+                    h1 {
+                        font-size: 16px;
+                        color: @red;
+                        line-height: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            > li {
+                &:last-child {
+                    a {
+                        border: 0;
+                    }
+                }
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: @darkgrey;
+                    .transitions();
+                    padding: 10px 10px;
+                    line-height: 18px;
+                    border-bottom: 1px solid lighten(@darkgrey, 75%);
+
+                    &:hover {
+                        background: darken(@lightgrey, 5%);
+                    }
+
+                    span {
+                        clear: both;
+                        display: block;
+                        color: lighten(@darkgrey, 30%);
+                        font-size: 11px;
+                        line-height: 13px;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+
+            > ul {
+                .opacity(1);
+                z-index: 5000;
+            }
+        }
+    }
 }
 
 //----------------------------------------------------
@@ -100,146 +253,7 @@ header {
                     float: right;
                 }
 
-                > li {
-                    float: left;
-                    display: block;
-                    padding: 10px 10px 0 10px;
-                    line-height: 30px;
-                    margin: 0;
-                    height: 50px;
-                    position: relative;
-                    cursor: default;
-                    border-left: 1px solid #EEEEEE;
-                    border-right: 1px solid transparent;
-                    .transitions();
-
-                    &:hover {
-                        background-color: #FFFFFF;
-                    }
-
-                    &.user {
-                        > ul {
-                            right: -1px;
-                            left: auto;
-                        }
-                    }
-
-                    &.alertsMenu {
-                        > span {
-                            &.unread {
-                                color: @red;
-                            }
-                        }
-                    }
-
-                    img {
-                        vertical-align: bottom;
-                        margin-left: 5px;
-                    }
-
-                    i {
-                        margin-right: 5px;
-                    }
-
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        color: @darkgrey;
-                        .transitions();
-
-                        &:hover {
-                            background: darken(@lightgrey, 5%);
-                        }
-                    }
-
-                    > ul {
-                        position: absolute;
-                        left: -1px;
-                        top: 50px;
-                        .transitions;
-                        background-color: #FFFFFF;
-                        .opacity(0);
-                        z-index: -1;
-                        width: 200px;
-                        border-left: 1px solid #CCCCCC;
-                        border-right: 1px solid #CCCCCC;
-                        border-bottom: 1px solid #CCCCCC;
-
-                        &.alerts {
-                            li {
-                                padding: 10px;
-                                line-height: 16px;
-                                border-bottom: 1px solid lighten(@darkgrey, 75%);
-
-                                &:last-child {
-                                    border-bottom: 0;
-                                }
-
-                                a {
-                                    padding: 0;
-                                    color: @red;
-                                    border: 0;
-                                    text-align: right;
-                                    font-size: 11px;
-                                    line-height: 13px;
-
-                                    &:hover {
-                                        color: darken(@red, 10%);
-                                        background-color: transparent;
-                                    }
-                                }
-
-                                time {
-                                    clear: both;
-                                    display: block;
-                                    color: lighten(@darkgrey, 30%);
-                                    font-size: 11px;
-                                    line-height: 13px;
-                                    text-align: right;
-                                }
-
-                                h1 {
-                                    font-size: 16px;
-                                    color: @red;
-                                    line-height: 16px;
-                                    margin-bottom: 0;
-                                }
-                            }
-                        }
-
-                        > li {
-                            &:last-child {
-                                a {
-                                    border: 0;
-                                }
-                            }
-
-                            a {
-                                padding: 10px 10px;
-                                line-height: 18px;
-                                border-bottom: 1px solid lighten(@darkgrey, 75%);
-
-                                span {
-                                    clear: both;
-                                    display: block;
-                                    color: lighten(@darkgrey, 30%);
-                                    font-size: 11px;
-                                    line-height: 13px;
-                                }
-                            }
-                        }
-                    }
-
-                    &:hover {
-                        border-left: 1px solid #CCCCCC;
-                        border-right: 1px solid #CCCCCC;
-
-                        > ul {
-                            .opacity(1);
-                            z-index: 5000;
-                        }
-                    }
-                }
+                .navMenuDropDowns;
             }
         }
     }
@@ -250,7 +264,101 @@ header {
 //----------------------------------------------------
 
 footer {
+    width: 100%;
+    padding: 0px;
+    background-color: @lightgrey;
+    border-top: 1px solid darken(@lightgrey, 10%);
 
+    > div {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0px 10px 20px;
+
+        > p {
+            margin-bottom: 5px;
+            text-align: justify;
+            color: lighten(@darkgrey, 30%);
+            font-size: 11px;
+            .cf;
+
+            img {
+                float: right;
+            }
+
+            a {
+                color: lighten(@darkgrey, 30%);
+                text-decoration: underline;
+
+                &:hover {
+                    color: lighten(@darkgrey, 10%);
+                }
+            }
+        }
+
+        > nav {
+            .cf;
+            margin-bottom: 60px;
+            border-bottom: 1px solid darken(@lightgrey, 10%);
+
+            > form {
+                float: left;
+                width: (268/1260)*100%;
+                margin-top: 10px;
+                margin-right: 20px;
+
+                > input {
+                    background-color: darken(@lightgrey, 10%);
+                    height: 30px;
+                    width: (238/268)*100%;
+                    padding: 0px 10px 0 10px;
+                    border: 1px solid darken(@lightgrey, 10%);
+                    margin: 0;
+                    float: left;
+                    .transitions;
+
+                    &:hover {
+                        background-color: darken(@lightgrey, 5%);
+                    }
+
+                    &:focus {
+                        background-color: lighten(@lightgrey, 5%);
+                        border: 1px solid @blue;
+                        outline: none;
+                    }
+                }
+
+                > button {
+                    border: 0;
+                    background-color: @blue;
+                    color: #FFFFFF;
+                    text-align: center;
+                    width: (30/268)*100%;
+                    height: 30px;
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    .transitions;
+
+                    &:hover {
+                        background-color: darken(@blue, 10%);
+                    }
+
+                    &:focus {
+                        background-color: lighten(@blue, 10%);
+                    }
+                }
+            }
+
+            > ul {
+                margin: 0;
+                padding: 0;
+                float: right;
+                .cf;
+                .navMenuDropDowns;
+            }
+        }
+    }
 }
 
 //----------------------------------------------------
@@ -258,7 +366,6 @@ footer {
 //----------------------------------------------------
 
 main {
-    margin-bottom: 20px;
     padding: 0 10px;
     max-width: 1280px;
     min-width: 320px;
@@ -269,6 +376,7 @@ main {
         width: (300/1260)*100%;
         padding: 10px;
         background-color: #F0F0F0;
+        margin-bottom: 40px;
     }
 
     > article {
@@ -276,6 +384,7 @@ main {
         width: (920/1260)*100%;
         background-color: #F0F0F0;
         padding: 10px;
+        margin-bottom: 40px;
     }
 }
 
