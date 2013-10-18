@@ -918,6 +918,17 @@ main > article {
   padding: 10px;
   margin-bottom: 40px;
 }
+main > article > div {
+  *zoom: 1;
+}
+main > article > div:before,
+main > article > div:after {
+  content: " ";
+  display: table;
+}
+main > article > div:after {
+  clear: both;
+}
 .button {
   padding: 10px 10px 0;
   color: #FAFAFA;
