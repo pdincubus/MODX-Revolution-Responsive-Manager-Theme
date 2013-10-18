@@ -124,6 +124,14 @@ header {
                         }
                     }
 
+                    &.alertsMenu {
+                        > span {
+                            &.unread {
+                                color: @red;
+                            }
+                        }
+                    }
+
                     img {
                         vertical-align: bottom;
                         margin-left: 5px;
@@ -157,9 +165,67 @@ header {
                         border-right: 1px solid #CCCCCC;
                         border-bottom: 1px solid #CCCCCC;
 
+                        &.alerts {
+                            li {
+                                padding: 10px;
+                                line-height: 16px;
+                                border-bottom: 1px solid lighten(@darkgrey, 75%);
+
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+
+                                a {
+                                    padding: 0;
+                                    color: @red;
+                                    border: 0;
+                                    text-align: right;
+                                    font-size: 11px;
+                                    line-height: 13px;
+
+                                    &:hover {
+                                        color: darken(@red, 10%);
+                                        background-color: transparent;
+                                    }
+                                }
+
+                                time {
+                                    clear: both;
+                                    display: block;
+                                    color: lighten(@darkgrey, 30%);
+                                    font-size: 11px;
+                                    line-height: 13px;
+                                    text-align: right;
+                                }
+
+                                h1 {
+                                    font-size: 16px;
+                                    color: @red;
+                                    line-height: 16px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
                         > li {
+                            &:last-child {
+                                a {
+                                    border: 0;
+                                }
+                            }
+
                             a {
-                                padding: 5px 10px;
+                                padding: 10px 10px;
+                                line-height: 18px;
+                                border-bottom: 1px solid lighten(@darkgrey, 75%);
+
+                                span {
+                                    clear: both;
+                                    display: block;
+                                    color: lighten(@darkgrey, 30%);
+                                    font-size: 11px;
+                                    line-height: 13px;
+                                }
                             }
                         }
                     }
@@ -335,6 +401,7 @@ nav.controlsNav {
             margin-right: 20px;
             height: 36px;
             padding-top: 7px;
+            position: relative;
 
             &:last-child {
                 float: right;
@@ -342,14 +409,13 @@ nav.controlsNav {
                 margin-right: 0;
 
                 a {
-                    position: relative;
                     padding-left: 20px;
                     width: 0;
 
                     i {
                         position: absolute;
                         right: 0;
-                        top: 5px;
+                        top: 10px;
                     }
 
                     &:hover {

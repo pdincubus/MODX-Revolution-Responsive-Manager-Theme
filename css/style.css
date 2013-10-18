@@ -542,6 +542,9 @@ header > div > nav > ul > li.user > ul {
   right: -1px;
   left: auto;
 }
+header > div > nav > ul > li.alertsMenu > span.unread {
+  color: #e42d2a;
+}
 header > div > nav > ul > li img {
   vertical-align: bottom;
   margin-left: 5px;
@@ -582,8 +585,54 @@ header > div > nav > ul > li > ul {
   border-right: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
 }
+header > div > nav > ul > li > ul.alerts li {
+  padding: 10px;
+  line-height: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+header > div > nav > ul > li > ul.alerts li:last-child {
+  border-bottom: 0;
+}
+header > div > nav > ul > li > ul.alerts li a {
+  padding: 0;
+  color: #e42d2a;
+  border: 0;
+  text-align: right;
+  font-size: 11px;
+  line-height: 13px;
+}
+header > div > nav > ul > li > ul.alerts li a:hover {
+  color: #c21b19;
+  background-color: transparent;
+}
+header > div > nav > ul > li > ul.alerts li time {
+  clear: both;
+  display: block;
+  color: #808080;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+}
+header > div > nav > ul > li > ul.alerts li h1 {
+  font-size: 16px;
+  color: #e42d2a;
+  line-height: 16px;
+  margin-bottom: 0;
+}
+header > div > nav > ul > li > ul > li:last-child a {
+  border: 0;
+}
 header > div > nav > ul > li > ul > li a {
-  padding: 5px 10px;
+  padding: 10px 10px;
+  line-height: 18px;
+  border-bottom: 1px solid #f2f2f2;
+}
+header > div > nav > ul > li > ul > li a span {
+  clear: both;
+  display: block;
+  color: #808080;
+  font-size: 11px;
+  line-height: 13px;
 }
 header > div > nav > ul > li:hover {
   border-left: 1px solid #CCCCCC;
@@ -732,6 +781,7 @@ nav.controlsNav > ul > li {
   margin-right: 20px;
   height: 36px;
   padding-top: 7px;
+  position: relative;
 }
 nav.controlsNav > ul > li:last-child {
   float: right;
@@ -739,14 +789,13 @@ nav.controlsNav > ul > li:last-child {
   margin-right: 0;
 }
 nav.controlsNav > ul > li:last-child a {
-  position: relative;
   padding-left: 20px;
   width: 0;
 }
 nav.controlsNav > ul > li:last-child a i {
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 10px;
 }
 nav.controlsNav > ul > li:last-child a:hover {
   width: 90px;
@@ -1117,7 +1166,7 @@ w #documentSettings form select:hover {
     font-size: 12px;
   }
   ul.tree > li > nav h1 {
-    width: auto;
+    width: 100%;
     font-size: 13px;
   }
   ul.tree > li > nav ul.treeSectionControls {
@@ -1189,6 +1238,20 @@ w #documentSettings form select:hover {
   header > div > form {
     width: 268px;
   }
+  nav.tabNav {
+    height: auto;
+  }
+  nav.tabNav > ul {
+    *zoom: 1;
+  }
+  nav.tabNav > ul:before,
+  nav.tabNav > ul:after {
+    content: " ";
+    display: table;
+  }
+  nav.tabNav > ul:after {
+    clear: both;
+  }
   nav.tabNav > ul > li > a {
     padding-left: 10px;
     padding-right: 10px;
@@ -1197,7 +1260,7 @@ w #documentSettings form select:hover {
     font-size: 13px;
   }
   ul.tree > li > nav h1 {
-    width: auto;
+    width: 100%;
     font-size: 13px;
   }
   ul.tree > li > nav ul.treeSectionControls {
@@ -1238,6 +1301,20 @@ w #documentSettings form select:hover {
   header > div > form {
     width: 268px;
   }
+  nav.tabNav {
+    height: auto;
+  }
+  nav.tabNav > ul {
+    *zoom: 1;
+  }
+  nav.tabNav > ul:before,
+  nav.tabNav > ul:after {
+    content: " ";
+    display: table;
+  }
+  nav.tabNav > ul:after {
+    clear: both;
+  }
   nav.tabNav > ul > li > a {
     padding-left: 10px;
     padding-right: 10px;
@@ -1246,7 +1323,7 @@ w #documentSettings form select:hover {
     font-size: 12px;
   }
   ul.tree > li > nav h1 {
-    width: auto;
+    width: 100%;
     font-size: 12px;
   }
   ul.tree > li > nav ul.treeSectionControls {
