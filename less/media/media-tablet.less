@@ -2,29 +2,65 @@
 //                   iPad portrait
 //----------------------------------------------------
 
-@media only screen and (min-width: 641px) and (max-width: 768px) {
+@media only screen and (min-width: 721px) and (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
     header {
-        height: 100px;
-
         > div {
+            .modxLogo {
+                background-size: 100% auto;
+                background-position: center center;
+                width: (31/1280)*100%
+            }
+
+            > form {
+                display: none;
+            }
+
             > nav {
-                float: none;
-                clear: both;
-                margin-left: 0;
+                width: (1188/1280)*100%;
+                margin-left: (20/1280)*100%;
+            }
+        }
+    }
 
-                > ul {
-                    > li {
-                        border-left: 0;
-                        border-right: 1px solid #EEEEEE;
-
-                        &:first-child {
-                            position: absolute;
-                            top: -50px;
-                            left: 309px;
-                        }
-                    }
+    nav.tabNav {
+        > ul {
+            > li {
+                > a {
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
             }
+        }
+    }
+
+    ul.tree {
+        > li {
+            > nav {
+                h1 {
+                    width: auto;
+                    font-size: 13px;
+                }
+
+                ul.treeSectionControls {
+                    display: none;
+                }
+            }
+
+            > ul {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    main {
+        article, aside {
+            float: none;
+            clear: both;
+            width: 100%;
         }
     }
 }

@@ -412,11 +412,11 @@ header > div:after {
   clear: both;
 }
 .transitions {
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 body {
   color: #333333;
@@ -431,7 +431,7 @@ header {
   border-bottom: 1px solid #e1e1e1;
 }
 header > div {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0 auto;
   position: relative;
 }
@@ -454,21 +454,22 @@ header > div .modxLogo {
 header > div > form {
   padding-left: 20px;
   float: left;
+  width: 20.9375%;
   margin-top: 10px;
 }
 header > div > form > input {
   background-color: #e1e1e1;
   height: 30px;
-  width: 218px;
+  width: 88.80597014925374%;
   padding: 0px 10px 0 10px;
   border: 1px solid #e1e1e1;
   margin: 0;
   float: left;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 header > div > form > input:hover {
   background-color: #ededed;
@@ -483,16 +484,16 @@ header > div > form > button {
   background-color: #0f90c3;
   color: #FFFFFF;
   text-align: center;
-  width: 30px;
+  width: 11.194029850746269%;
   height: 30px;
   margin: 0;
   padding: 0;
   float: left;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 header > div > form > button:hover {
   background-color: #0b6d94;
@@ -505,8 +506,7 @@ header > div > nav {
   margin-right: 10px;
   margin-left: 20px;
   height: 50px;
-  max-width: 790px;
-  width: 70.53571428571429%;
+  width: 71.875%;
 }
 header > div > nav > ul {
   margin: 0;
@@ -529,11 +529,11 @@ header > div > nav > ul > li {
   cursor: default;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid transparent;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 header > div > nav > ul > li:hover {
   background-color: #FFFFFF;
@@ -553,11 +553,11 @@ header > div > nav > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 header > div > nav > ul > li a:hover {
   background: #ededed;
@@ -566,11 +566,11 @@ header > div > nav > ul > li > ul {
   position: absolute;
   left: -1px;
   top: 50px;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
   background-color: #FFFFFF;
   -webkit-opacity: 0;
   -khtml-opacity: 0;
@@ -599,21 +599,19 @@ header > div > nav > ul > li:hover > ul {
 main {
   margin-bottom: 20px;
   padding: 0 10px;
-  max-width: 1140px;
+  max-width: 1280px;
   min-width: 320px;
   margin: 0 auto;
 }
 main > aside {
   float: left;
-  max-width: 300px;
-  width: 26.785714285714285%;
+  width: 23.809523809523807%;
   padding: 10px;
   background-color: #F0F0F0;
 }
 main > article {
   float: right;
-  max-width: 790px;
-  width: 70.53571428571429%;
+  width: 73.01587301587301%;
   background-color: #F0F0F0;
   padding: 10px;
 }
@@ -628,11 +626,11 @@ main > article {
   height: 40px;
   display: inline-block;
   margin-left: 10px;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 .button i {
   margin-left: 5px;
@@ -684,11 +682,11 @@ nav.tabNav > ul > li > a {
   font-size: 12px;
   display: block;
   text-decoration: none;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 nav.tabNav > ul > li > a:hover {
   background-color: #FDFDFD;
@@ -757,19 +755,23 @@ nav.controlsNav > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
-  width: 12px;
+  width: 15px;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
   font-size: 12px;
+}
+nav.controlsNav > ul > li a i {
+  font-size: 14px;
+  padding-right: 2px;
 }
 nav.controlsNav > ul > li a:hover {
   color: #0f90c3;
-  width: 95px;
+  width: 75px;
 }
 ul.tree {
   margin: 0;
@@ -778,20 +780,23 @@ ul.tree {
 ul.tree:last-child > li:last-child {
   margin-bottom: 0;
 }
-ul.tree > li:last-child {
-  margin-bottom: 10px;
+ul.tree > li.active > nav {
+  background-color: #0f90c3;
+}
+ul.tree > li.active > nav:hover {
+  background-color: #0b6d94;
 }
 ul.tree > li > nav {
-  background-color: #333333;
+  background-color: #4d4d4d;
   color: #FFFFFF;
   padding: 10px 10px 0 10px;
   border-bottom: 1px solid #FFFFFF;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
   *zoom: 1;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
   cursor: pointer;
 }
 ul.tree > li > nav:before,
@@ -803,13 +808,13 @@ ul.tree > li > nav:after {
   clear: both;
 }
 ul.tree > li > nav:hover {
-  background-color: #4d4d4d;
+  background-color: #333333;
 }
 ul.tree > li > nav h1 {
   font-size: 14px;
   line-height: 20px;
   float: left;
-  width: 72.3076923076923%;
+  width: 57.692307692307686%;
 }
 ul.tree > li > nav h1 i {
   margin-right: 5px;
@@ -836,11 +841,11 @@ ul.tree > li > nav ul.treeSectionControls li a {
   text-decoration: none;
   color: #FFFFFF;
   display: block;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 ul.tree > li > nav ul.treeSectionControls li a:hover {
   color: #cccccc;
@@ -857,11 +862,11 @@ ul.tree > li > ul > li a {
   display: block;
   text-decoration: none;
   color: #333333;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 ul.tree > li > ul > li a i {
   margin-right: 5px;
@@ -888,6 +893,12 @@ ul.tree > li > ul > li > ul {
 }
 ul.tree > li > ul > li > ul > li {
   margin-bottom: 5px;
+}
+ul.tree > li > ul > li > ul > li > ul {
+  margin-left: 30px;
+}
+ul.tree > li > ul > li > ul > li > ul > li > ul {
+  margin-left: 45px;
 }
 #resourceEdit > nav {
   float: right;
@@ -927,11 +938,11 @@ ul.tree > li > ul > li > ul > li {
   border: 1px solid #CCCCCC;
   padding: 10px;
   background-color: #FFFFFF;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -ms-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
   font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
   font-size: 18px;
 }
@@ -1059,55 +1070,205 @@ w #documentSettings form select:hover {
 #rte img {
   max-width: 100%;
 }
-@media only screen and (min-width: 769px) and (max-width: 1025px) {
-  header {
-    height: 100px;
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  body {
+    font-size: 13px;
+  }
+  header > div .modxLogo {
+    background-size: 100% auto;
+    background-position: center center;
+    width: 2.421875%;
+  }
+  header > div > form {
+    display: none;
+  }
+  header > div > form > button {
+    font-size: 12px;
   }
   header > div > nav {
-    float: none;
-    clear: both;
-    margin-left: 0;
+    width: 92.8125%;
+    margin-left: 1.5625%;
   }
-  header > div > nav > ul > li {
-    border-left: 0;
-    border-right: 1px solid #EEEEEE;
+  nav.tabNav > ul > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  nav.controlsNav > ul {
+    overflow-x: hidden;
+  }
+  nav.controlsNav > ul > li a {
+    font-size: 11px;
+    width: 13px;
+  }
+  nav.controlsNav > ul > li a i {
+    font-size: 12px;
+    padding-right: 2px;
+  }
+  nav.controlsNav > ul > li a:hover {
+    width: 13px;
+  }
+  nav.controlsNav > ul > li:last-child a {
+    width: 10px;
+  }
+  nav.controlsNav > ul > li:last-child a:hover {
+    width: 10px;
+  }
+  #documentSettings form .checkboxes label {
+    font-size: 12px;
+  }
+  ul.tree > li > nav h1 {
+    width: auto;
+    font-size: 13px;
+  }
+  ul.tree > li > nav ul.treeSectionControls {
+    display: none;
+  }
+  ul.tree > li > ul {
+    overflow-x: scroll;
   }
 }
-@media only screen and (min-width: 641px) and (max-width: 768px) {
-  header {
-    height: 100px;
+@media only screen and (min-width: 721px) and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  header > div .modxLogo {
+    background-size: 100% auto;
+    background-position: center center;
+    width: 2.421875%;
+  }
+  header > div > form {
+    display: none;
   }
   header > div > nav {
+    width: 92.8125%;
+    margin-left: 1.5625%;
+  }
+  nav.tabNav > ul > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  ul.tree > li > nav h1 {
+    width: auto;
+    font-size: 13px;
+  }
+  ul.tree > li > nav ul.treeSectionControls {
+    display: none;
+  }
+  ul.tree > li > ul {
+    overflow-x: scroll;
+  }
+  main article,
+  main aside {
     float: none;
     clear: both;
-    margin-left: 0;
-  }
-  header > div > nav > ul > li {
-    border-left: 0;
-    border-right: 1px solid #EEEEEE;
-  }
-  header > div > nav > ul > li:first-child {
-    position: absolute;
-    top: -50px;
-    left: 309px;
+    width: 100%;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 640px) {
+@media only screen and (min-width: 551px) and (max-width: 720px) {
+  body {
+    font-size: 13px;
+  }
   header {
     height: auto;
   }
   header > div > nav {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
     float: none;
     clear: both;
-    margin-left: 0;
+    border-bottom: 1px solid #e1e1e1;
   }
-  header > div > nav > ul > li {
-    border-left: 0;
-    border-right: 1px solid #EEEEEE;
+  header > div > nav > ul.userNav {
+    float: left;
   }
-  [class^="icon-"],
-  [class*=" icon-"] {
+  header > div > nav > ul > li i {
+    display: none !important;
+  }
+  header > div > form {
+    width: 268px;
+  }
+  nav.tabNav > ul > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #documentSettings form .checkboxes label {
+    font-size: 13px;
+  }
+  ul.tree > li > nav h1 {
+    width: auto;
+    font-size: 13px;
+  }
+  ul.tree > li > nav ul.treeSectionControls {
     display: none;
+  }
+  ul.tree > li > ul {
+    overflow-x: scroll;
+  }
+  main article,
+  main aside {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    height: auto;
+  }
+  header > div > nav {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+    clear: both;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  header > div > nav > ul.userNav {
+    float: left;
+  }
+  header > div > nav > ul > li i {
+    display: none !important;
+  }
+  header > div > form {
+    width: 268px;
+  }
+  nav.tabNav > ul > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #documentSettings form .checkboxes label {
+    font-size: 12px;
+  }
+  ul.tree > li > nav h1 {
+    width: auto;
+    font-size: 12px;
+  }
+  ul.tree > li > nav ul.treeSectionControls {
+    display: none;
+  }
+  ul.tree > li > ul {
+    overflow-x: scroll;
+  }
+  main article,
+  main aside {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+  #documentSettings form fieldset {
+    width: 100%;
+  }
+  #documentSettings form fieldset.l {
+    float: none;
+  }
+  #documentSettings form fieldset.r {
+    float: none;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {

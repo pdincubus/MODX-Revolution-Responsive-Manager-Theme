@@ -260,17 +260,33 @@
                 </nav>
 
                 <nav class="controlsNav">
-                    <ul>
-                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i> New document</a></li>
-                        <li><a href="#" title="New weblink"><i class="icon-link"></i> New weblink</a></li>
-                        <li><a href="#" title="New symlink"><i class="icon-copy"></i> New symlink</a></li>
-                        <li><a href="#" title="New static resource"><i class="icon-file-text-alt"></i> New static file</a></li>
+                    <ul class="contentTree">
+                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i> Document</a></li>
+                        <li><a href="#" title="New weblink"><i class="icon-link"></i> Weblink</a></li>
+                        <li><a href="#" title="New symlink"><i class="icon-copy"></i> Symlink</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-file-text-alt"></i> Static file</a></li>
                         <li><a href="#" title="Permanently remove deleted resources"><i class="icon-trash"></i> Empty bin</a></li>
+                    </ul>
+
+                    <ul class="filesTree">
+                        <li><a href="#" class="active" title="New resource"><i class="icon-cloud-upload"></i> Upload</a></li>
+                        <li><a href="#" title="New weblink"><i class="icon-folder-close"></i> Folder</a></li>
+                        <li><a href="#" title="New symlink"><i class="icon-file-alt"></i> File</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-list-alt"></i> Browser</a></li>
+                    </ul>
+
+                    <ul class="templatesTree">
+                        <li><a href="#" class="active" title="New resource"><i class="icon-file-alt"></i> Template</a></li>
+                        <li><a href="#" title="New weblink"><i class="icon-th-large"></i> Chunk</a></li>
+                        <li><a href="#" title="New symlink"><i class="icon-code"></i> Snippet</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-magic"></i> TV</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-cog"></i> Plugin</a></li>
+                        <li><a href="#" title="New static resource"><i class="icon-folder-alt-close"></i> Category</a></li>
                     </ul>
                 </nav>
 
                 <ul class="tree" id="contentTree">
-                    <li>
+                    <li class="closed">
                         <nav>
                             <h1>
                                 <i class="icon-globe"></i>
@@ -327,6 +343,116 @@
                                 </ul>
                             </li>
                             <li><a href="#"><i class="icon-comment"></i> Articles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="tree" id="filesTree">
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-cloud"></i>
+                                Main filesystem
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Media source settings"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" title="Upload file to this media source"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh context view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li>
+                                <a href="#"><i class="icon-folder-open"></i> assets</a>
+                                <ul>
+                                    <li><a href="#"><i class="icon-folder-close"></i> files</a></li>
+                                    <li>
+                                        <a href="#"><i class="icon-folder-open"></i> images</a>
+                                        <ul>
+                                            <li><a href="#"><i class="icon-picture"></i> Pretty-Photograph.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Smiling-Couple.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Work-Meeting.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Quirky-Angle-Building-Shot.jpg</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="icon-file"></i> text-doc.txt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="icon-folder-close"></i> core</a></li>
+                            <li><a href="#"><i class="icon-folder-close"></i> manager</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-cloud"></i>
+                                Dropbox
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Media source settings"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" title="Upload file to this media source"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh context view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li>
+                                <a href="#"><i class="icon-folder-open"></i> assets</a>
+                                <ul>
+                                    <li><a href="#"><i class="icon-folder-close"></i> files</a></li>
+                                    <li>
+                                        <a href="#"><i class="icon-folder-open"></i> images</a>
+                                        <ul>
+                                            <li><a href="#"><i class="icon-picture"></i> Pretty-Photograph.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Smiling-Couple.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Work-Meeting.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Quirky-Angle-Building-Shot.jpg</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="icon-file"></i> text-doc.txt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="icon-folder-close"></i> core</a></li>
+                            <li><a href="#"><i class="icon-folder-close"></i> manager</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="closed">
+                        <nav>
+                            <h1>
+                                <i class="icon-cloud"></i>
+                                Amazon S3
+                            </h1>
+
+                            <ul class="treeSectionControls">
+                                <li><a href="#" title="Media source settings"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" title="Upload file to this media source"><i class="icon-plus-sign"></i></a></li>
+                                <li><a href="#" title="Refresh context view"><i class="icon-refresh"></i></a></li>
+                            </ul>
+                        </nav>
+
+                        <ul>
+                            <li>
+                                <a href="#"><i class="icon-folder-open"></i> assets</a>
+                                <ul>
+                                    <li><a href="#"><i class="icon-folder-close"></i> files</a></li>
+                                    <li>
+                                        <a href="#"><i class="icon-folder-open"></i> images</a>
+                                        <ul>
+                                            <li><a href="#"><i class="icon-picture"></i> Pretty-Photograph.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Smiling-Couple.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Work-Meeting.jpg</a></li>
+                                            <li><a href="#"><i class="icon-picture"></i> Quirky-Angle-Building-Shot.jpg</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="icon-file"></i> text-doc.txt</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><i class="icon-folder-close"></i> core</a></li>
+                            <li><a href="#"><i class="icon-folder-close"></i> manager</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -2,28 +2,190 @@
 //            iPhone and smart phones
 //----------------------------------------------------
 
-@media only screen and (min-width: 320px) and (max-width: 640px) {
+@media only screen and (min-width: 551px) and (max-width: 720px) {
+    body {
+        font-size: 13px;
+    }
+
     header {
         height: auto;
 
         > div {
             > nav {
+                width: auto;
+                height: auto;
+                margin-left: 0;
+                margin-right: 0;
                 float: none;
                 clear: both;
-                margin-left: 0;
+                border-bottom: 1px solid darken(@lightgrey, 10%);
 
                 > ul {
-                    > li {
-                        border-left: 0;
-                        border-right: 1px solid #EEEEEE;
+                    &.userNav {
+                        float: left;
                     }
+
+                    > li {
+                        i {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            > form {
+                width: 268px;
+            }
+        }
+    }
+
+    nav.tabNav {
+        > ul {
+            > li {
+                > a {
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
             }
         }
     }
 
-    [class^="icon-"],
-    [class*=" icon-"] {
-        display: none;
+    #documentSettings {
+        form {
+            .checkboxes {
+                label {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    ul.tree {
+        > li {
+            > nav {
+                h1 {
+                    width: auto;
+                    font-size: 13px;
+                }
+
+                ul.treeSectionControls {
+                    display: none;
+                }
+            }
+
+            > ul {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    main {
+        article, aside {
+            float: none;
+            clear: both;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        height: auto;
+
+        > div {
+            > nav {
+                width: auto;
+                height: auto;
+                margin-left: 0;
+                margin-right: 0;
+                float: none;
+                clear: both;
+                border-bottom: 1px solid darken(@lightgrey, 10%);
+
+                > ul {
+                    &.userNav {
+                        float: left;
+                    }
+
+                    > li {
+                        i {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            > form {
+                width: 268px;
+            }
+        }
+    }
+
+    nav.tabNav {
+        > ul {
+            > li {
+                > a {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    #documentSettings {
+        form {
+            .checkboxes {
+                label {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    ul.tree {
+        > li {
+            > nav {
+                h1 {
+                    width: auto;
+                    font-size: 12px;
+                }
+
+                ul.treeSectionControls {
+                    display: none;
+                }
+            }
+
+            > ul {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    main {
+        article, aside {
+            float: none;
+            clear: both;
+            width: 100%;
+        }
+    }
+
+    #documentSettings {
+        form {
+            fieldset {
+                width: 100%;
+
+                &.l {
+                    float: none;
+                }
+
+                &.r {
+                    float: none;
+                }
+            }
+        }
     }
 }
