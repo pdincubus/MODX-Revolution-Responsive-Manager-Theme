@@ -463,6 +463,7 @@ header > div > form {
   float: left;
   width: 20.9375%;
   margin-top: 10px;
+  position: relative;
 }
 header > div > form > input {
   background-color: #e1e1e1;
@@ -548,6 +549,12 @@ header > div > nav > ul > li:hover {
 header > div > nav > ul > li.user > ul {
   right: -1px;
   left: auto;
+}
+header > div > nav > ul > li.user > ul > li > a.logout {
+  color: #61a546;
+}
+header > div > nav > ul > li.user > ul > li > a.logout:hover {
+  color: #7bbc62;
 }
 header > div > nav > ul > li.alertsMenu > span.unread {
   color: #e42d2a;
@@ -813,6 +820,12 @@ footer > div > nav > ul > li:hover {
 footer > div > nav > ul > li.user > ul {
   right: -1px;
   left: auto;
+}
+footer > div > nav > ul > li.user > ul > li > a.logout {
+  color: #61a546;
+}
+footer > div > nav > ul > li.user > ul > li > a.logout:hover {
+  color: #7bbc62;
 }
 footer > div > nav > ul > li.alertsMenu > span.unread {
   color: #e42d2a;
@@ -1283,7 +1296,8 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 }
 #documentSettings form input,
 #documentSettings form textarea,
-#documentSettings form select {
+#documentSettings form select,
+#documentSettings form .dropdownatron-container {
   height: 40px;
   width: 100%;
   line-height: 20px;
@@ -1297,17 +1311,59 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   transition: 0.2s all ease;
   font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
   font-size: 18px;
+  position: relative;
 }
 #documentSettings form input:focus,
 #documentSettings form textarea:focus,
-#documentSettings form select:focus {
+#documentSettings form select:focus,
+#documentSettings form .dropdownatron-container:focus {
   border-color: #0f90c3;
   outline: none;
 }
-w #documentSettings form input:hover,
-w #documentSettings form textarea:hover,
-w #documentSettings form select:hover {
+#documentSettings form input:hover,
+#documentSettings form textarea:hover,
+#documentSettings form select:hover,
+#documentSettings form .dropdownatron-container:hover {
   border-color: #999999;
+}
+#documentSettings form .dropdownatron-selected {
+  cursor: pointer;
+}
+#documentSettings form .dropdownatron-select {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 10px;
+  height: 18px;
+  display: block;
+  color: #333333;
+}
+#documentSettings form .dropdownatron-select:after {
+  content: '';
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 14px;
+  line-height: 14px;
+}
+#documentSettings form .dropdownatron-options {
+  position: absolute;
+  z-index: 5000;
+  width: 100%;
+  top: 39px;
+  left: 0;
+  background: #FFFFFF;
+  outline: 1px solid #999999;
+}
+#documentSettings form .dropdownatron-options li {
+  padding: 10px;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+#documentSettings form .dropdownatron-options li:last-child {
+  border-bottom: 0;
+}
+#documentSettings form .dropdownatron-options li:hover {
+  background: #ededed;
 }
 #documentSettings form textarea {
   height: 100px;
@@ -1326,6 +1382,9 @@ w #documentSettings form select:hover {
   border-radius: 0;
   padding: 8px 10px 10px 10px;
   position: relative;
+}
+#documentSettings form input#pageTitle {
+  padding-right: 40px;
 }
 #documentSettings form label {
   display: block;
@@ -1395,6 +1454,17 @@ w #documentSettings form select:hover {
   line-height: 14px;
   font-size: 14px;
 }
+#pageTitleCharsRemain {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #CCCCCC;
+}
+#pageTitleCharsRemain.limit {
+  color: #e42d2a;
+}
 #pageDescCharsRemain {
   position: absolute;
   bottom: 10px;
@@ -1421,6 +1491,75 @@ w #documentSettings form select:hover {
 }
 #rte img {
   max-width: 100%;
+}
+ul.typeAhead {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 300px;
+  background-color: #FFFFFF;
+  display: none;
+  z-index: 5000;
+  border: 1px solid #CCCCCC;
+}
+header ul.typeAhead {
+  left: 20px;
+}
+ul.typeAhead > li {
+  *zoom: 1;
+  padding: 10px 10px 10px 10px;
+  border-left: 100px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  cursor: pointer;
+  background: #fafafa;
+}
+ul.typeAhead > li:before,
+ul.typeAhead > li:after {
+  content: " ";
+  display: table;
+}
+ul.typeAhead > li:after {
+  clear: both;
+}
+ul.typeAhead > li:hover {
+  background: #0f90c3;
+  color: #FFFFFF;
+  border-left: 100px solid #0f90c3;
+  border-bottom: 1px solid #0f90c3;
+}
+ul.typeAhead > li:hover span.desc,
+ul.typeAhead > li:hover span.type {
+  color: #FFFFFF;
+}
+ul.typeAhead > li p {
+  margin-bottom: 5px;
+}
+ul.typeAhead > li span {
+  display: block;
+}
+ul.typeAhead > li span.desc {
+  color: #aeaeae;
+  color: #808080;
+  font-size: 11px;
+  line-height: 13px;
+}
+ul.typeAhead > li span.type {
+  width: 40%;
+  text-align: right;
+  color: #808080;
+  font-size: 11px;
+  line-height: 13px;
+  position: absolute;
+  top: 12px;
+  right: 210px;
+}
+@media only screen and (max-width: 1260px) {
+  footer > div > nav > ul {
+    float: none;
+    clear: both;
+  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
   body {

@@ -33,6 +33,18 @@ body {
             > ul {
                 right: -1px;
                 left: auto;
+
+                > li {
+                    > a {
+                        &.logout {
+                            color: @green;
+
+                            &:hover {
+                                color: lighten(@green, 10%);
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -200,6 +212,7 @@ header {
             float: left;
             width: (268/1280)*100%;
             margin-top: 10px;
+            position: relative;
 
             > input {
                 background-color: darken(@lightgrey, 10%);
@@ -759,7 +772,7 @@ ul.tree {
             position: relative;
         }
 
-        input, textarea, select {
+        input, textarea, select, .dropdownatron-container {
             height: 40px;
             width: 100%;
             line-height: 20px;
@@ -769,14 +782,61 @@ ul.tree {
             .transitions();
             font-family: @bodycopy;
             font-size: 18px;
+            position: relative;
 
             &:focus {
                 border-color: @blue;
                 outline: none;
-            }w
+            }
 
             &:hover {
                 border-color: darken(#CCCCCC, 20%);
+            }
+        }
+
+        .dropdownatron-selected {
+            cursor: pointer;
+        }
+
+        .dropdownatron-select {
+            position: absolute;
+            top: 14px;
+            right: 10px;
+            width: 10px;
+            height: 18px;
+            display: block;
+            color: @darkgrey;
+
+            &:after {
+                content: '';
+                display: block;
+                font-family: 'FontAwesome';
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+
+        .dropdownatron-options {
+            position: absolute;
+            z-index: 5000;
+            width: 100%;
+            top: 39px;
+            left: 0;
+            background: #FFFFFF;
+            outline: 1px solid darken(#CCCCCC, 20%);
+
+            li {
+                padding: 10px;
+                border-bottom: 1px solid lighten(@darkgrey, 75%);
+                cursor: pointer;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &:hover {
+                    background: darken(@lightgrey, 5%);
+                }
             }
         }
 
@@ -797,6 +857,12 @@ ul.tree {
             .border-radius(0);
             padding: 8px 10px 10px 10px;
             position: relative;
+        }
+
+        input {
+            &#pageTitle {
+                padding-right: 40px;
+            }
         }
 
         label {
@@ -859,6 +925,19 @@ ul.tree {
     }
 }
 
+#pageTitleCharsRemain {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #CCCCCC;
+
+    &.limit {
+        color: @red;
+    }
+}
+
 #pageDescCharsRemain {
     position: absolute;
     bottom: 10px;
@@ -879,5 +958,82 @@ ul.tree {
 
     img {
         max-width: 100%;
+    }
+}
+
+ul.typeAhead {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 300px;
+    background-color: #FFFFFF;
+    display: none;
+    z-index: 5000;
+    border: 1px solid #CCCCCC;
+
+    header & {
+        left: 20px;
+    }
+
+    > li {
+        .cf;
+        padding: 10px 10px 10px 10px;
+        border-left: 100px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        cursor: pointer;
+        background: @lightgrey;
+
+        &:hover {
+            background: @blue;
+            color: #FFFFFF;
+            border-left: 100px solid @blue;
+            border-bottom: 1px solid @blue;
+
+            span.desc, span.type {
+                color: #FFFFFF;
+            }
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        span {
+            display: block;
+
+            &.desc {
+                color: darken(@lightgrey, 30%);
+                color: lighten(@darkgrey, 30%);
+                font-size: 11px;
+                line-height: 13px;
+            }
+
+            &.type {
+                width: 40%;
+                text-align: right;
+                color: lighten(@darkgrey, 30%);
+                font-size: 11px;
+                line-height: 13px;
+                position: absolute;
+                top: 12px;
+                right: 210px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1260px) {
+    footer {
+        > div {
+            > nav {
+                > ul {
+                    float: none;
+                    clear: both;
+                }
+            }
+        }
     }
 }

@@ -2,6 +2,20 @@
 *      custom js stuff
 *----------------------------------------------------*/
 
+function charLimit(maxLen, thisField) {
+    var max = maxLen,
+        len = thisField.val().length,
+        char = max - len;
+
+    if (len >= max) {
+        $(thisField).parent().find('.charsRemain').addClass('limit');
+    } else {
+        $(thisField).parent().find('.charsRemain').removeClass('limit');
+    }
+
+    $(thisField).parent().find('.charsRemain').text(char);
+}
+
 $(document).ready(function() {
     $('ul.tree > li.closed').children('ul').hide();
     $('aside').find('ul.tree').hide().first().show();
@@ -18,18 +32,12 @@ $(document).ready(function() {
         }
     });
 
+    $('#pageTitle').on('keyup', function() {
+        charLimit(70, $(this));
+    });
+
     $('#pageDescription').on('keyup', function() {
-        var max = 160,
-            len = $(this).val().length,
-            char = max - len;
-
-        if (len >= max) {
-            $('#pageDescCharsRemain').addClass('limit');
-        } else {
-            $('#pageDescCharsRemain').removeClass('limit');
-        }
-
-        $('#pageDescCharsRemain').text(char);
+        charLimit(160, $(this));
     });
 
     $('aside > nav.tabNav li a').on('click', function(e) {
@@ -50,5 +58,16 @@ $(document).ready(function() {
         $('article').find('section'+tab).show().siblings('section').hide();
         $('#resourceEdit nav.tabNav li a').removeClass('active');
         $(this).addClass('active');
+    });
+
+    $('#pageStyle').dropdownatron();
+
+    $('.awesomeBar').on({
+        focus: function() {
+            $(this).siblings('ul').slideDown(200);
+        },
+        blur:  function() {
+            $(this).siblings('ul').slideUp(200);
+        }
     });
 });
