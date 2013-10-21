@@ -69,7 +69,7 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
     * HTML elements
     * No tag soup where at all possible
     * Content first. Soon as the header bar is out the way... CONTENT. Tree nav, etc moved to after the content so that it's not in the way for mobile users.
-    * Awesome-bar-search-thing in header <del>and footer<del> as per dev 2.3. <ins>Decided against footer search bar and nav, combined again in header. Seems logical users should find all navigation/search in the header like it is now.
+    * Awesome-bar-search-thing in header <del>and footer</del> as per dev 2.3. <ins>Decided against footer search bar and nav, combined again in header. Seems logical users should find all navigation/search in the header like it is now</ins>.
     * NO FIXED PANELS. Not even the header. Because:
         1. iOS doesn't handle fixed positioning all that well.
         2. We're not trying to create framesets! STOP IT! IT IS NOT The 1990s any more. PEOPLE UNDERSTAND THE CONCEPT OF SCROLLING. The rest of the web does it, why shouldn't the Manager work properly?!
