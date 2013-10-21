@@ -31,7 +31,7 @@ Whole point is really to get people talking about it I guess. What do you think 
 Let's bash heads and come up with somehting a bit more elegant and thought-out.
 
 
-##TODO
+##TODO / Stuff I know isn't working quite right
 
 * <del>Fix dropdownatron to calculate width properly on screen resize/refresh</del>
 * <del>Fix top and bottom menus for mobile devices that can't use the hover menus properly</del>
@@ -40,11 +40,9 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * Opera testing
 * iPhone/iPad/Android testing
 * Everything else I've not yet written down.
-
-##Stuff I know isn't working quite right
-
 * The modal seems to cause a weird scroll bug sometimes in Chrome on Mac.
 * Looks like CKEditor is having some overlappy issues in places, you can't click the top row of buttons. No idea why and I don't even care because this is just a placeholder RTE and isn't meant to do anything other than appear and look like an RTE.
+* The window resize function isn't perfect yet, and scaling from desktop to mobile then back to desktop again can cause you to need to refresh to make menus work. No biggy.
 
 
 ##What is in this thing?
