@@ -697,7 +697,7 @@ footer > div {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  padding: 0px 10px 20px;
+  padding: 20px 10px 20px;
 }
 footer > div > p {
   margin-bottom: 5px;
@@ -1793,19 +1793,7 @@ ul.typeAhead > li span.type {
 .md-overlay {
   background: rgba(15, 144, 195, 0.6);
 }
-/*@media only screen and (max-width: 1260px) {
-    footer {
-        > div {
-            > nav {
-                > ul {
-                    float: none;
-                    clear: both;
-                }
-            }
-        }
-    }
-}*/
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
+@media only screen and (min-width: 881px) and (max-width: 1064px) {
   body {
     font-size: 13px;
   }
@@ -1862,7 +1850,7 @@ ul.typeAhead > li span.type {
     overflow-x: scroll;
   }
 }
-@media only screen and (min-width: 721px) and (max-width: 768px) {
+@media only screen and (min-width: 731px) and (max-width: 880px) {
   body {
     font-size: 13px;
   }
@@ -1877,6 +1865,9 @@ ul.typeAhead > li span.type {
   header > div > nav {
     width: 92.8125%;
     margin-left: 1.5625%;
+  }
+  header > div > nav > ul > li.user img {
+    display: none;
   }
   nav.tabNav > ul > li > a {
     padding-left: 10px;
@@ -1899,7 +1890,7 @@ ul.typeAhead > li span.type {
     width: 100%;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 720px) {
+@media only screen and (min-width: 320px) and (max-width: 730px) {
   body {
     font-size: 13px;
   }

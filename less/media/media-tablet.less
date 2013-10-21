@@ -2,7 +2,7 @@
 //                   iPad portrait
 //----------------------------------------------------
 
-@media only screen and (min-width: 721px) and (max-width: 768px) {
+@media only screen and (min-width: 731px) and (max-width: 880px) {
     body {
         font-size: 13px;
     }
@@ -22,6 +22,22 @@
             > nav {
                 width: (1188/1280)*100%;
                 margin-left: (20/1280)*100%;
+
+                > ul {
+                    > li {
+                        &.user {
+                            img {
+                                display: none;
+                            }
+
+                            > ul {
+                                > li {
+
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
