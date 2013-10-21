@@ -21,9 +21,14 @@ function charLimit(maxLen, thisField) {
 *----------------------------------------------------*/
 
 function dynamicResizer() {
-    if($(window).width() <= 720) {
+    if($(window).width() <= 730) {
         $('header > div > nav > ul > li').on('click', function() {
             $(this).children('ul').toggle();
+        });
+
+        $('#mobNav').on('click', function() {
+            $(this).toggleClass('active');
+            $('header > div > nav').slideToggle(200);
         });
     }
 }
@@ -61,6 +66,9 @@ $(document).ready(function() {
     $('aside').find('ul.tree').hide().first().show();
     $('aside').find('nav.controlsNav ul').hide().first().show();
     $('article').find('section').hide().first().show();
+
+    //hide menus if we're loaded on a small screen
+    $('header > div > nav').hide();
 
     //rte for example
     $('textarea#contentArea, textarea#quickContentArea').ckeditor();
