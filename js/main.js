@@ -1,5 +1,5 @@
 /*----------------------------------------------------
-*      custom js stuff
+*      input character limit function
 *----------------------------------------------------*/
 
 function charLimit(maxLen, thisField) {
@@ -16,12 +16,61 @@ function charLimit(maxLen, thisField) {
     $(thisField).parent().find('.charsRemain').text(char);
 }
 
+/*----------------------------------------------------
+*      dynamic window resize function
+*----------------------------------------------------*/
+
+function dynamicResizer() {
+    if($(window).width() <= 720) {
+        $('header > div > nav > ul > li').on('click', function() {
+            $(this).children('ul').toggle();
+        });
+    }
+}
+
+$(window).load(function() {
+    dynamicResizer();
+
+    var resizeEvent = (function () {
+        var timers = {};
+        return function (callback, ms, uniqueId) {
+            if (!uniqueId) {
+                uniqueId = "Don't call this twice without a uniqueId";
+            }
+            if (timers[uniqueId]) {
+                clearTimeout (timers[uniqueId]);
+            }
+            timers[uniqueId] = setTimeout(callback, ms);
+        };
+    })();
+
+    $(window).resize(function() {
+        resizeEvent(function() {
+            dynamicResizer();
+        }, 250, 'dynamicResize');
+    });
+});
+
+/*----------------------------------------------------
+*      general
+*----------------------------------------------------*/
+
 $(document).ready(function() {
+    //hide things we don't need to start with
     $('ul.tree > li.closed').children('ul').hide();
     $('aside').find('ul.tree').hide().first().show();
     $('aside').find('nav.controlsNav ul').hide().first().show();
     $('article').find('section').hide().first().show();
 
+    //rte for example
+    $('textarea#contentArea').ckeditor();
+
+    //are we needing to hide subnav items because we're on small screen?
+    if($(window).width() <= 720) {
+        $('header > div > nav > ul > li > ul').hide();
+    }
+
+    //accordion for contexts/templates/files
     $(document).on('click', 'ul.tree > li > nav > h1', function() {
         if($(this).parents('li').last().hasClass('closed')) {
             $(this).parents('li').last().removeClass('closed').addClass('active');
@@ -32,6 +81,7 @@ $(document).ready(function() {
         }
     });
 
+    //set char limit on fields
     $('#pageTitle').on('keyup', function() {
         charLimit(70, $(this));
     });
@@ -40,6 +90,7 @@ $(document).ready(function() {
         charLimit(160, $(this));
     });
 
+    //tab nav for sidebar
     $('aside > nav.tabNav li a').on('click', function(e) {
         e.preventDefault();
         var tab = $(this).attr('href');
@@ -51,6 +102,7 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    //tab nav for main article area
     $('#resourceEdit nav.tabNav li a').on('click', function(e) {
         e.preventDefault();
         var tab = $(this).attr('href');
@@ -60,8 +112,11 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    //johns super dropdownatron for the template select
+    //TODO - maybe expand this to all selects?
     $('#pageStyle').dropdownatron();
 
+    //on search bar focus show example of type ahead results
     $('.awesomeBar').on({
         focus: function() {
             $(this).siblings('ul').slideDown(200);
@@ -70,4 +125,5 @@ $(document).ready(function() {
             $(this).siblings('ul').slideUp(200);
         }
     });
+
 });

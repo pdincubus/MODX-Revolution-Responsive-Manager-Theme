@@ -881,7 +881,7 @@ jQuery.extend( jQuery.easing,
              // selected display
              $('<div/>').addClass('dropdownatron-selected')
                  .text($toDisplay.text()).data('val', $toDisplay.data('val'))
-                 .attr('data-val', $toDisplay.data('val')).css('width', this.$options.width()+'px')
+                 .attr('data-val', $toDisplay.data('val'))
                  .appendTo(this.$container).on({
                      'click': function(e) { that.onToggle(e); }
                  });

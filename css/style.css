@@ -709,9 +709,6 @@ footer > div > p:after {
 footer > div > p:after {
   clear: both;
 }
-footer > div > p img {
-  float: left;
-}
 footer > div > p a {
   color: #808080;
   text-decoration: underline;
@@ -948,6 +945,31 @@ footer > div > nav > ul > li:hover > ul {
   -moz-opacity: 1;
   opacity: 1;
   z-index: 5000;
+}
+footer > div > ul {
+  float: right;
+  clear: right;
+  width: 73.01587301587301%;
+  text-align: right;
+}
+footer > div > ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+footer > div > ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 12px;
+}
+footer > div > ul li a:hover {
+  color: #808080;
+}
+footer > div > a.logo-footer {
+  float: left;
+  display: block;
+}
+footer > div > a.logo-footer img {
+  vertical-align: bottom;
 }
 main {
   padding: 0 10px;
@@ -1270,6 +1292,17 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   float: right;
   margin-bottom: 10px;
 }
+#resourceEdit > nav > ul > li {
+  *zoom: 1;
+}
+#resourceEdit > nav > ul > li:before,
+#resourceEdit > nav > ul > li:after {
+  content: " ";
+  display: table;
+}
+#resourceEdit > nav > ul > li:after {
+  clear: both;
+}
 #resourceEdit > h1 {
   float: left;
   margin-bottom: 10px;
@@ -1290,6 +1323,13 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 }
 #documentSettings form fieldset.r {
   float: right;
+}
+#documentSettings form fieldset.c {
+  width: 100%;
+  position: relative;
+  float: none;
+  clear: both;
+  z-index: 5000;
 }
 #documentSettings form p {
   margin-bottom: 20px;
@@ -1485,20 +1525,18 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #pageDescCharsRemain.limit {
   color: #e42d2a;
 }
-#rte {
+#contentArea {
   *zoom: 1;
   clear: both;
+  width: 100%;
 }
-#rte:before,
-#rte:after {
+#contentArea:before,
+#contentArea:after {
   content: " ";
   display: table;
 }
-#rte:after {
+#contentArea:after {
   clear: both;
-}
-#rte img {
-  max-width: 100%;
 }
 ul.typeAhead {
   margin: 0;
@@ -1663,7 +1701,7 @@ ul.typeAhead > li span.type {
     width: 100%;
   }
 }
-@media only screen and (min-width: 551px) and (max-width: 720px) {
+@media only screen and (min-width: 320px) and (max-width: 720px) {
   body {
     font-size: 13px;
   }
@@ -1671,19 +1709,77 @@ ul.typeAhead > li span.type {
     height: auto;
   }
   header > div > nav {
-    width: auto;
+    width: 100%;
     height: auto;
     margin-left: 0;
     margin-right: 0;
     float: none;
     clear: both;
-    border-bottom: 1px solid #e1e1e1;
+    background-color: #333333;
+    color: #FFFFFF;
   }
-  header > div > nav > ul.userNav {
-    float: left;
+  header > div > nav > ul {
+    *zoom: 1;
+    height: auto;
+    width: 100%;
   }
-  header > div > nav > ul > li i {
-    display: none !important;
+  header > div > nav > ul:before,
+  header > div > nav > ul:after {
+    content: " ";
+    display: table;
+  }
+  header > div > nav > ul:after {
+    clear: both;
+  }
+  header > div > nav > ul.userNav,
+  header > div > nav > ul.siteNav {
+    float: none;
+  }
+  header > div > nav > ul > li {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+  header > div > nav > ul > li:hover {
+    color: #FFFFFF;
+    background-color: #666666;
+  }
+  header > div > nav > ul > li:hover > ul {
+    z-index: auto;
+  }
+  header > div > nav > ul > li.alertsMenu > span.unread {
+    color: #FFFFFF;
+  }
+  header > div > nav > ul > li a {
+    color: #FFFFFF;
+  }
+  header > div > nav > ul > li a:hover {
+    color: #FFFFFF;
+  }
+  header > div > nav > ul > li > ul {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    z-index: auto;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    color: #333333;
+  }
+  header > div > nav > ul > li > ul > li {
+    display: block;
+    width: 100%;
+  }
+  header > div > nav > ul > li > ul > li a:hover {
+    color: #333333;
   }
   header > div > form {
     width: 268px;
@@ -1706,8 +1802,19 @@ ul.typeAhead > li span.type {
     padding-left: 10px;
     padding-right: 10px;
   }
+  #documentSettings {
+    padding-left: 0;
+    padding-right: 0;
+  }
   #documentSettings form .checkboxes label {
     font-size: 13px;
+  }
+  #documentSettings form fieldset {
+    width: 100%;
+  }
+  #documentSettings form fieldset.l,
+  #documentSettings form fieldset.r {
+    float: none;
   }
   ul.tree > li > nav h1 {
     width: 100%;
@@ -1728,78 +1835,30 @@ ul.typeAhead > li span.type {
     clear: both;
     width: 100%;
   }
-}
-@media only screen and (min-width: 320px) and (max-width: 550px) {
-  body {
-    font-size: 12px;
-  }
-  header {
-    height: auto;
-  }
-  header > div > nav {
-    width: auto;
-    height: auto;
-    margin-left: 0;
-    margin-right: 0;
-    float: none;
-    clear: both;
-    border-bottom: 1px solid #e1e1e1;
-  }
-  header > div > nav > ul.userNav {
-    float: left;
-  }
-  header > div > nav > ul > li i {
-    display: none !important;
-  }
-  header > div > form {
+  footer > div > nav > form {
     width: 268px;
   }
-  nav.tabNav {
-    height: auto;
-  }
-  nav.tabNav > ul {
-    *zoom: 1;
-  }
-  nav.tabNav > ul:before,
-  nav.tabNav > ul:after {
-    content: " ";
-    display: table;
-  }
-  nav.tabNav > ul:after {
-    clear: both;
-  }
-  nav.tabNav > ul > li > a {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  #documentSettings form .checkboxes.l,
-  #documentSettings form .checkboxes.r {
-    width: auto;
-    float: none;
-  }
-  #documentSettings form .checkboxes label {
-    font-size: 12px;
-  }
-  #documentSettings form fieldset.l,
-  #documentSettings form fieldset.r {
-    width: auto;
-    float: none;
-  }
-  ul.tree > li > nav h1 {
-    width: 100%;
-    font-size: 12px;
-  }
-  ul.tree > li > nav ul.treeSectionControls {
+  footer > div p {
     display: none;
   }
-  ul.tree > li > ul {
-    overflow-x: scroll;
+}
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+  .button {
+    margin-left: 0;
+    float: left;
+    padding: 9px;
   }
-  main article,
-  main aside {
+  #resourceEdit > nav {
     float: none;
     clear: both;
-    width: 100%;
+    margin-bottom: 20px;
+  }
+  #resourceEdit > h1 {
+    float: none;
+    clear: both;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
