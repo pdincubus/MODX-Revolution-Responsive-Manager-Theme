@@ -62,6 +62,9 @@ $(document).ready(function() {
     $('aside').find('nav.controlsNav ul').hide().first().show();
     $('article').find('section').hide().first().show();
 
+    //rte for example
+    $('textarea#contentArea').ckeditor();
+
     //are we needing to hide subnav items because we're on small screen?
     if($(window).width() <= 720) {
         $('header > div > nav > ul > li > ul').hide();

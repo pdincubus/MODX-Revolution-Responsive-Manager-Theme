@@ -309,10 +309,6 @@ footer {
             clear: right;
             width: (920/1260)*100%;
 
-            img {
-                float: left;
-            }
-
             a {
                 color: lighten(@darkgrey, 30%);
                 text-decoration: underline;
@@ -384,6 +380,37 @@ footer {
                 float: right;
                 .cf;
                 .navMenuDropDowns;
+            }
+        }
+
+        > ul {
+            float: right;
+            clear: right;
+            width: (920/1260)*100%;
+            text-align: right;
+
+            li {
+                display: inline-block;
+                margin-left: 20px;
+
+                a {
+                    color: @darkgrey;
+                    text-decoration: none;
+                    font-size: 12px;
+
+                    &:hover {
+                        color: lighten(@darkgrey, 30%);
+                    }
+                }
+            }
+        }
+
+        > a.logo-footer {
+            float: left;
+            display: block;
+
+            img {
+                vertical-align: bottom;
             }
         }
     }
@@ -772,6 +799,14 @@ ul.tree {
             &.r {
                 float: right;
             }
+
+            &.c {
+                width: 100%;
+                position: relative;
+                float: none;
+                clear: both;
+                z-index: 5000;
+            }
         }
 
         p {
@@ -976,13 +1011,10 @@ ul.tree {
     }
 }
 
-#rte {
+#contentArea {
     .cf;
     clear: both;
-
-    img {
-        max-width: 100%;
-    }
+    width: 100%;
 }
 
 ul.typeAhead {

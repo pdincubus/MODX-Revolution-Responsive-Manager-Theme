@@ -1,8 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
 
 @import url(../css/font-awesome.css);
-
-@import url(../css/jquery.fs.naver.css);
 html,
 body,
 div,
@@ -711,9 +709,6 @@ footer > div > p:after {
 footer > div > p:after {
   clear: both;
 }
-footer > div > p img {
-  float: left;
-}
 footer > div > p a {
   color: #808080;
   text-decoration: underline;
@@ -950,6 +945,31 @@ footer > div > nav > ul > li:hover > ul {
   -moz-opacity: 1;
   opacity: 1;
   z-index: 5000;
+}
+footer > div > ul {
+  float: right;
+  clear: right;
+  width: 73.01587301587301%;
+  text-align: right;
+}
+footer > div > ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+footer > div > ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 12px;
+}
+footer > div > ul li a:hover {
+  color: #808080;
+}
+footer > div > a.logo-footer {
+  float: left;
+  display: block;
+}
+footer > div > a.logo-footer img {
+  vertical-align: bottom;
 }
 main {
   padding: 0 10px;
@@ -1304,6 +1324,13 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #documentSettings form fieldset.r {
   float: right;
 }
+#documentSettings form fieldset.c {
+  width: 100%;
+  position: relative;
+  float: none;
+  clear: both;
+  z-index: 5000;
+}
 #documentSettings form p {
   margin-bottom: 20px;
   margin-top: 0;
@@ -1498,20 +1525,18 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #pageDescCharsRemain.limit {
   color: #e42d2a;
 }
-#rte {
+#contentArea {
   *zoom: 1;
   clear: both;
+  width: 100%;
 }
-#rte:before,
-#rte:after {
+#contentArea:before,
+#contentArea:after {
   content: " ";
   display: table;
 }
-#rte:after {
+#contentArea:after {
   clear: both;
-}
-#rte img {
-  max-width: 100%;
 }
 ul.typeAhead {
   margin: 0;
@@ -1814,8 +1839,7 @@ ul.typeAhead > li span.type {
     width: 268px;
   }
   footer > div p {
-    float: none;
-    width: 100%;
+    display: none;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 550px) {
