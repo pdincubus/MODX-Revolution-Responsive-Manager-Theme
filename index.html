@@ -127,6 +127,17 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <i class="icon-question-sign"></i> Help
+                            <ul>
+                                <li><a href="http://forums.modx.com/"><i class="icon-group"></i> Support forums</a></li>
+                                <li><a href="http://rtfm.modx.com/"><i class="icon-list-ol"></i> RTFM documentation</a></li>
+                                <li><a href="http://modx.com/blog/"><i class="icon-comment"></i> MODX blog</a></li>
+                                <li><a href="http://tracker.modx.com/"><i class="icon-bug"></i> Issue tracker</a></li>
+                                <li><a href="http://modx.com/support/"><i class="icon-credit-card"></i> Commercial support</a></li>
+                                <li><a href="https://github.com/modxcms"><i class="icon-github"></i> MODX on GitHub</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <ul class="userNav">
@@ -382,7 +393,20 @@
                         </nav>
 
                         <ul>
-                            <li><a href="#"><i class="icon-file"></i> Home</a></li>
+                            <li>
+                                <a href="#" class="launchContextMenu"><i class="icon-file"></i> Home</a>
+                                <nav id="rightClickMenu">
+                                    <ul>
+                                        <li><a href="#" class="md-trigger" data-modal="quickEdit">Quick edit</a></li>
+                                        <li><a href="#">Edit</a></li>
+                                        <li><a href="#">View live</a></li>
+                                        <li><a href="#">Duplicate</a></li>
+                                        <li><a href="#">Create page</a></li>
+                                        <li><a href="#">Unpublish</a></li>
+                                        <li><a href="#">Delete</a></li>
+                                    </ul>
+                                </nav>
+                            </li>
                             <li><a href="#"><i class="icon-folder-close"></i> Container closed</a></li>
                             <li>
                                 <a href="#"><i class="icon-folder-open"></i> Container open</a>
@@ -665,35 +689,6 @@
 
         <footer>
             <div>
-                <nav>
-                    <form method="post" action="#">
-                        <input type="text" name="awesomeBar" class="awesomeBar" id="awesomeBar2" placeholder="Search">
-                        <button type="submit" title="search"><i class="icon-search"></i></button>
-                        <ul class="typeAhead">
-                            <li>
-                                <span class="type">Resource</span>
-                                <p><i class="icon-file-alt"></i> Home</p>
-                                <span class="desc">This is the homepage and this is its description</span>
-                            </li>
-                            <li>
-                                <span class="type">Template</span>
-                                <p><i class="icon-columns"></i> Home</p>
-                                <span class="desc">This is the homepage and this is its description</span>
-                            </li>
-                        </ul>
-                    </form>
-
-                    <ul>
-                        <li><a href="#"><i class="icon-question-sign"></i> Help</a></li>
-                        <li><a href="http://forums.modx.com/"><i class="icon-group"></i> Support forums</a></li>
-                        <li><a href="http://rtfm.modx.com/"><i class="icon-list-ol"></i> RTFM documentation</a></li>
-                        <li><a href="http://modx.com/blog/"><i class="icon-comment"></i> MODX blog</a></li>
-                        <li><a href="http://tracker.modx.com/"><i class="icon-bug"></i> Issue tracker</a></li>
-                        <li><a href="http://modx.com/support/"><i class="icon-credit-card"></i> Commercial support</a></li>
-                        <li><a href="https://github.com/modxcms"><i class="icon-github"></i> MODX on GitHub</a></li>
-                    </ul>
-                </nav>
-
                 <a href="http://www.modx.com" class="logo-footer"><img src="img/logo-footer.png"></a>
 
                 <p>The MODX&reg; software you are using is the result of collaboration with an amazing community of users, supporters and developers. Since 2004, the team behind MODX has sponsored and managed it, funding ongoing work through commercial support and commissioned features. You can buy support from the source, to get one hour of emergency support (also usable for two hours non-priority support). Or <a href="mailto:hello@modx.com">email us</a> if you have another question about MODX in general.</p>
@@ -707,9 +702,97 @@
             </div>
         </footer>
 
+        <div class="md-modal md-effect-2" id="quickEdit">
+            <div class="md-content">
+                <h1>Quick edit resource: Home</h1>
+                <form action="#" method="post">
+                    <fieldset class="l">
+                        <p>
+                            <label for="quickPageTitle">Title</label>
+                            <input type="text" name="quickPageTitle" id="pageTitle">
+                            <span class="charsRemain" id="quickPageTitleCharsRemain">70</span>
+                        </p>
+
+                        <p>
+                            <label for="quickLongTitle">Long title</label>
+                            <input type="text" name="quickLongTitle" id="quickLongTitle">
+                        </p>
+
+                        <p>
+                            <label for="quickMenuTitle">Menu title</label>
+                            <input type="text" name="quickMenuTitle" id="quickMenuTitle">
+                        </p>
+
+                        <p>
+                            <label for="quickPageDescription">Description</label>
+                            <textarea name="quickPageDescription" id="quickPageDescription"></textarea>
+                            <span class="charsRemain" id="quickPageDescCharsRemain">160</span>
+                        </p>
+
+                        <div class="checkboxes">
+                            <p>
+                                <input type="checkbox" name="quickPagePublished" id="quickPagePublished" checked="checked">
+                                <label for="quickPagePublished">Published</label>
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="r">
+                        <p>
+                            <label for="quickPageStyle">Page style</label>
+                            <select name="quickPageStyle" id="quickPageStyle">
+                                <option value="1">BaseTemplate</option>
+                                <option value="2">Homepage</option>
+                                <option value="3">Article</option>
+                                <option value="4">ArticleContainer</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="quickPageURLAlias">Page URL alias</label>
+                            <input type="text" name="quickPageURLAlias" id="quickPageURLAlias">
+                        </p>
+
+                        <p>
+                            <label for="quickLinkAttributes">Link attributes</label>
+                            <input type="text" name="quickLinkAttributes" id="quickLinkAttributes">
+                        </p>
+
+                        <p>
+                            <label for="quickPageIntrotext">Summary</label>
+                            <textarea name="quickPageIntrotext" id="quickPageIntrotext"></textarea>
+                        </p>
+
+                        <div class="checkboxes">
+                            <p>
+                                <input type="checkbox" name="quickPageHidden" id="quickPageHidden">
+                                <label for="quickPageHidden">Hide from menus</label>
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="c">
+                        <label for="quickContentArea">Content</label>
+                        <textarea id="quickContentArea" name="quickContentArea"></textarea>
+                    </fieldset>
+                </form>
+
+                <nav class="controls">
+                    <button class="button complete">Save <i class="icon-save"></i></button>
+                    <button class="md-close button action">Close <i class="icon-remove"></i></button>
+                </nav>
+            </div>
+        </div>
+
+        <div class="md-overlay"></div>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="js/lib/ckeditor/ckeditor.js"></script>
         <script src="js/lib/ckeditor/adapters/jquery.js"></script>
+        <script>
+            // this is important for IEs
+            var polyfilter_scriptpath = 'js/';
+        </script>
         <script src="js/lib/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
