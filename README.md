@@ -30,8 +30,8 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 
 ##TODO
 
-* Fix dropdownatron to calculate width properly on screen resize/refresh
-* Fix top and bottom menus for mobile devices that can't use the hover menus properly
+* <del>Fix dropdownatron to calculate width properly on screen resize/refresh</del>
+* <del>Fix top and bottom menus for mobile devices that can't use the hover menus properly</del>
 * IE testing
 * Windows Firefox/Chrome testing
 * Opera testing
