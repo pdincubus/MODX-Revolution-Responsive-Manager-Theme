@@ -83,3 +83,21 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * Tab nav is now less tabby and more flatly styled
 * Current MODX 2.3 dev build has bad combinations of rounded/square corners, flat/not flat, icons/no icons elements. I've tried to keep everything flat, square and icons where appropriate. Everything should feel like it ties together properly.
 * For mobile sized devices, and those I don't think are big enough for two or three columns, The theme should start to collapse nicely. Menus should get mostly out of the way and the content should appear before the tree nav.
+
+
+##What works where?
+
+Since this is just a static mockup, not everything does something, so here's an overview
+
+* The accordion sections in the tree nav open and close.
+* You can right click for a context menu on "Home" in the "Main" context. If you click on "Quick edit" you'll get the modal window example.
+* The "Content", "Files", "Templates" tab nav works and changes the control nav underneath it depending on what choose.
+* The other accorions on these tabs open/close too
+* The main content tab nav "Page settings", "Page extras", etc works but no other tab has content at the moment.
+* The pagetitle and descriptions form fields have working counters
+* The select for page style is styled and drops down
+* The CKEditor instances sort of work but not set up to save (obviously)
+* Clicking in the search box will show you a preview of how type ahead results would look. This isn't hooked into anything to fetch results though
+* None of the menus/dropdowns in the header go anywhere, but they do look nice.
+* Hover over control nav in the sidebar just under the tab nav to see an idea for showing/hiding labels for things
+* Resize your browser window. I've spent a fair bit of time trying to figure out the best way to make the Manager work on smaller screens, tablets and mobiles. The nav collapses completely at mobile size and is opened using a button top right. Sub nav items are opened by tapping the menu item. Fairly obvious really.
