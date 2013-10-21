@@ -67,15 +67,14 @@ $(document).ready(function() {
     $('aside').find('nav.controlsNav ul').hide().first().show();
     $('article').find('section').hide().first().show();
 
-    //hide menus if we're loaded on a small screen
-    $('header > div > nav').hide();
-
     //rte for example
     $('textarea#contentArea, textarea#quickContentArea').ckeditor();
 
     //are we needing to hide subnav items because we're on small screen?
     if($(window).width() <= 720) {
         $('header > div > nav > ul > li > ul').hide();
+        //hide menus if we're loaded on a small screen
+        $('header > div > nav').hide();
     }
 
     //bind right click on "home page" to a contextmenu so we can launch a modal window
