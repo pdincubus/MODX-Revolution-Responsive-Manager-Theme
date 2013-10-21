@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
 
 @import url(../css/font-awesome.css);
+
+@import url(../css/component.css);
 html,
 body,
 div,
@@ -551,10 +553,11 @@ header > div > nav > ul > li.user > ul {
   left: auto;
 }
 header > div > nav > ul > li.user > ul > li > a.logout {
-  color: #61a546;
+  color: #0f90c3;
 }
 header > div > nav > ul > li.user > ul > li > a.logout:hover {
-  color: #7bbc62;
+  color: #FFFFFF;
+  background-color: #0f90c3;
 }
 header > div > nav > ul > li.alertsMenu > span.unread {
   color: #e42d2a;
@@ -607,6 +610,12 @@ header > div > nav > ul > li > ul.alerts li:after {
 header > div > nav > ul > li > ul.alerts li:last-child {
   border-bottom: 0;
 }
+header > div > nav > ul > li > ul.alerts li:first-child:hover {
+  background-color: transparent;
+}
+header > div > nav > ul > li > ul.alerts li:hover {
+  background-color: rgba(15, 144, 195, 0.1);
+}
 header > div > nav > ul > li > ul.alerts li a {
   padding: 0;
   color: #e42d2a;
@@ -658,7 +667,7 @@ header > div > nav > ul > li > ul > li a {
   border-bottom: 1px solid #f2f2f2;
 }
 header > div > nav > ul > li > ul > li a:hover {
-  background: #ededed;
+  background-color: rgba(15, 144, 195, 0.1);
 }
 header > div > nav > ul > li > ul > li a span {
   clear: both;
@@ -712,6 +721,11 @@ footer > div > p:after {
 footer > div > p a {
   color: #808080;
   text-decoration: underline;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 footer > div > p a:hover {
   color: #4d4d4d;
@@ -719,7 +733,6 @@ footer > div > p a:hover {
 footer > div > nav {
   *zoom: 1;
   margin-bottom: 60px;
-  border-bottom: 1px solid #e1e1e1;
 }
 footer > div > nav:before,
 footer > div > nav:after {
@@ -819,10 +832,11 @@ footer > div > nav > ul > li.user > ul {
   left: auto;
 }
 footer > div > nav > ul > li.user > ul > li > a.logout {
-  color: #61a546;
+  color: #0f90c3;
 }
 footer > div > nav > ul > li.user > ul > li > a.logout:hover {
-  color: #7bbc62;
+  color: #FFFFFF;
+  background-color: #0f90c3;
 }
 footer > div > nav > ul > li.alertsMenu > span.unread {
   color: #e42d2a;
@@ -875,6 +889,12 @@ footer > div > nav > ul > li > ul.alerts li:after {
 footer > div > nav > ul > li > ul.alerts li:last-child {
   border-bottom: 0;
 }
+footer > div > nav > ul > li > ul.alerts li:first-child:hover {
+  background-color: transparent;
+}
+footer > div > nav > ul > li > ul.alerts li:hover {
+  background-color: rgba(15, 144, 195, 0.1);
+}
 footer > div > nav > ul > li > ul.alerts li a {
   padding: 0;
   color: #e42d2a;
@@ -926,7 +946,7 @@ footer > div > nav > ul > li > ul > li a {
   border-bottom: 1px solid #f2f2f2;
 }
 footer > div > nav > ul > li > ul > li a:hover {
-  background: #ededed;
+  background-color: rgba(15, 144, 195, 0.1);
 }
 footer > div > nav > ul > li > ul > li a span {
   clear: both;
@@ -946,6 +966,35 @@ footer > div > nav > ul > li:hover > ul {
   opacity: 1;
   z-index: 5000;
 }
+footer > div > nav > ul > li {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  position: relative;
+}
+footer > div > nav > ul > li:hover {
+  border-bottom: 1px solid #CCCCCC;
+}
+footer > div > nav > ul > li:hover:before {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  background-color: #FFFFFF;
+  content: '';
+  display: block;
+}
+footer > div > nav > ul > li > ul {
+  top: -235px;
+  left: auto;
+  right: -1px;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 0;
+}
+footer > div > nav > ul > li > ul > li:last-child {
+  border-bottom: 0;
+}
 footer > div > ul {
   float: right;
   clear: right;
@@ -960,6 +1009,11 @@ footer > div > ul li a {
   color: #333333;
   text-decoration: none;
   font-size: 12px;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
 }
 footer > div > ul li a:hover {
   color: #808080;
@@ -1018,6 +1072,7 @@ main > article > div:after {
   -ms-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
+  border: 0;
 }
 .button i {
   margin-left: 5px;
@@ -1074,11 +1129,19 @@ nav.tabNav > ul > li > a {
   -ms-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 nav.tabNav > ul > li > a:hover {
   background-color: #FDFDFD;
   border-top: 3px solid #666666;
   color: #666666;
+}
+nav.tabNav > ul > li > a:focus {
+  outline: none;
 }
 nav.tabNav > ul > li > a.active {
   background-color: #FFFFFF;
@@ -1152,6 +1215,11 @@ nav.controlsNav > ul > li a {
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
   font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 nav.controlsNav > ul > li a i {
   font-size: 14px;
@@ -1161,12 +1229,19 @@ nav.controlsNav > ul > li a:hover {
   color: #0f90c3;
   width: 65px;
 }
+nav.controlsNav > ul > li a:focus {
+  outline: none;
+}
 ul.tree {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 ul.tree:last-child > li:last-child {
   margin-bottom: 0;
+}
+ul.tree > li {
+  position: relative;
 }
 ul.tree > li.active > nav {
   background-color: #0f90c3;
@@ -1242,9 +1317,11 @@ ul.tree > li > ul {
   margin: 0;
   padding: 15px 10px;
   background-color: #FFFFFF;
+  position: relative;
 }
 ul.tree > li > ul > li {
   margin-bottom: 10px;
+  position: relative;
 }
 ul.tree > li > ul > li a {
   display: block;
@@ -1255,6 +1332,14 @@ ul.tree > li > ul > li a {
   -ms-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+ul.tree > li > ul > li a:focus {
+  outline: none;
 }
 ul.tree > li > ul > li a i {
   margin-right: 5px;
@@ -1309,37 +1394,46 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   margin-top: 10px;
   margin-left: 10px;
 }
-#documentSettings {
+#documentSettings,
+#quickEdit {
   padding: 10px;
 }
-#documentSettings form fieldset {
+#documentSettings form fieldset,
+#quickEdit form fieldset {
   border: 0;
   padding: 0;
   margin: 0;
   width: 47.4025974025974%;
 }
-#documentSettings form fieldset.l {
+#documentSettings form fieldset.l,
+#quickEdit form fieldset.l {
   float: left;
 }
-#documentSettings form fieldset.r {
+#documentSettings form fieldset.r,
+#quickEdit form fieldset.r {
   float: right;
 }
-#documentSettings form fieldset.c {
+#documentSettings form fieldset.c,
+#quickEdit form fieldset.c {
   width: 100%;
   position: relative;
   float: none;
   clear: both;
-  z-index: 5000;
 }
-#documentSettings form p {
+#documentSettings form p,
+#quickEdit form p {
   margin-bottom: 20px;
   margin-top: 0;
   position: relative;
 }
 #documentSettings form input,
+#quickEdit form input,
 #documentSettings form textarea,
+#quickEdit form textarea,
 #documentSettings form select,
-#documentSettings form .dropdownatron-container {
+#quickEdit form select,
+#documentSettings form .dropdownatron-container,
+#quickEdit form .dropdownatron-container {
   height: 40px;
   width: 100%;
   line-height: 23px;
@@ -1356,28 +1450,40 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   position: relative;
 }
 #documentSettings form input:focus,
+#quickEdit form input:focus,
 #documentSettings form textarea:focus,
+#quickEdit form textarea:focus,
 #documentSettings form select:focus,
-#documentSettings form .dropdownatron-container:focus {
+#quickEdit form select:focus,
+#documentSettings form .dropdownatron-container:focus,
+#quickEdit form .dropdownatron-container:focus {
   border-color: #0f90c3;
   outline: none;
 }
 #documentSettings form input:hover,
+#quickEdit form input:hover,
 #documentSettings form textarea:hover,
+#quickEdit form textarea:hover,
 #documentSettings form select:hover,
-#documentSettings form .dropdownatron-container:hover {
+#quickEdit form select:hover,
+#documentSettings form .dropdownatron-container:hover,
+#quickEdit form .dropdownatron-container:hover {
   border-color: #999999;
 }
-#documentSettings form .dropdownatron-container:hover .dropdownatron-select {
+#documentSettings form .dropdownatron-container:hover .dropdownatron-select,
+#quickEdit form .dropdownatron-container:hover .dropdownatron-select {
   color: #333333;
 }
-#documentSettings form .dropdownatron-container.shown .dropdownatron-select:after {
+#documentSettings form .dropdownatron-container.shown .dropdownatron-select:after,
+#quickEdit form .dropdownatron-container.shown .dropdownatron-select:after {
   content: '';
 }
-#documentSettings form .dropdownatron-selected {
+#documentSettings form .dropdownatron-selected,
+#quickEdit form .dropdownatron-selected {
   cursor: pointer;
 }
-#documentSettings form .dropdownatron-select {
+#documentSettings form .dropdownatron-select,
+#quickEdit form .dropdownatron-select {
   position: absolute;
   top: 10px;
   right: 5px;
@@ -1386,14 +1492,16 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   display: block;
   color: #CCCCCC;
 }
-#documentSettings form .dropdownatron-select:after {
+#documentSettings form .dropdownatron-select:after,
+#quickEdit form .dropdownatron-select:after {
   content: '';
   display: block;
   font-family: 'FontAwesome';
   font-size: 20px;
   line-height: 20px;
 }
-#documentSettings form .dropdownatron-options {
+#documentSettings form .dropdownatron-options,
+#quickEdit form .dropdownatron-options {
   position: absolute;
   z-index: 5000;
   width: 100%;
@@ -1402,26 +1510,32 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   background: #FFFFFF;
   outline: 1px solid #999999;
 }
-#documentSettings form .dropdownatron-options li {
+#documentSettings form .dropdownatron-options li,
+#quickEdit form .dropdownatron-options li {
   padding: 10px;
   border-bottom: 1px solid #f2f2f2;
   cursor: pointer;
 }
-#documentSettings form .dropdownatron-options li:last-child {
+#documentSettings form .dropdownatron-options li:last-child,
+#quickEdit form .dropdownatron-options li:last-child {
   border-bottom: 0;
 }
-#documentSettings form .dropdownatron-options li:hover {
+#documentSettings form .dropdownatron-options li:hover,
+#quickEdit form .dropdownatron-options li:hover {
   background: #ededed;
 }
-#documentSettings form textarea {
+#documentSettings form textarea,
+#quickEdit form textarea {
   height: 100px;
   font-size: 14px;
   resize: none;
 }
-#documentSettings form textarea#pageDescription {
+#documentSettings form textarea#pageDescription,
+#quickEdit form textarea#pageDescription {
   padding-right: 50px;
 }
-#documentSettings form select {
+#documentSettings form select,
+#quickEdit form select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1431,46 +1545,58 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   padding: 8px 10px 10px 10px;
   position: relative;
 }
-#documentSettings form input#pageTitle {
+#documentSettings form input#pageTitle,
+#quickEdit form input#pageTitle {
   padding-right: 40px;
 }
-#documentSettings form label {
+#documentSettings form label,
+#quickEdit form label {
   display: block;
   font-size: 12px;
   line-height: 20px;
   cursor: pointer;
 }
-#documentSettings form .checkboxes {
+#documentSettings form .checkboxes,
+#quickEdit form .checkboxes {
   *zoom: 1;
   width: 50%;
   float: left;
 }
 #documentSettings form .checkboxes:before,
-#documentSettings form .checkboxes:after {
+#quickEdit form .checkboxes:before,
+#documentSettings form .checkboxes:after,
+#quickEdit form .checkboxes:after {
   content: " ";
   display: table;
 }
-#documentSettings form .checkboxes:after {
+#documentSettings form .checkboxes:after,
+#quickEdit form .checkboxes:after {
   clear: both;
 }
-#documentSettings form .checkboxes p {
+#documentSettings form .checkboxes p,
+#quickEdit form .checkboxes p {
   *zoom: 1;
   margin-bottom: 10px;
 }
 #documentSettings form .checkboxes p:before,
-#documentSettings form .checkboxes p:after {
+#quickEdit form .checkboxes p:before,
+#documentSettings form .checkboxes p:after,
+#quickEdit form .checkboxes p:after {
   content: " ";
   display: table;
 }
-#documentSettings form .checkboxes p:after {
+#documentSettings form .checkboxes p:after,
+#quickEdit form .checkboxes p:after {
   clear: both;
 }
-#documentSettings form .checkboxes label {
+#documentSettings form .checkboxes label,
+#quickEdit form .checkboxes label {
   display: inline-block;
   margin-left: 10px;
   font-size: 14px;
 }
-#documentSettings form .checkboxes input[type=checkbox] {
+#documentSettings form .checkboxes input[type=checkbox],
+#quickEdit form .checkboxes input[type=checkbox] {
   width: 14px;
   height: 14px;
   padding: 0;
@@ -1484,13 +1610,16 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   position: relative;
   top: 2px;
 }
-#documentSettings form .checkboxes input[type=checkbox]:focus {
+#documentSettings form .checkboxes input[type=checkbox]:focus,
+#quickEdit form .checkboxes input[type=checkbox]:focus {
   border-color: #CCCCCC;
 }
-#documentSettings form .checkboxes input[type=checkbox]:checked {
+#documentSettings form .checkboxes input[type=checkbox]:checked,
+#quickEdit form .checkboxes input[type=checkbox]:checked {
   border-color: #0f90c3;
 }
-#documentSettings form .checkboxes input[type=checkbox]:checked:after {
+#documentSettings form .checkboxes input[type=checkbox]:checked:after,
+#quickEdit form .checkboxes input[type=checkbox]:checked:after {
   content: '×';
   display: block;
   width: 14px;
@@ -1502,7 +1631,8 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   line-height: 14px;
   font-size: 14px;
 }
-#pageTitleCharsRemain {
+#pageTitleCharsRemain,
+#quickPageTitleCharsRemain {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -1510,10 +1640,12 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   line-height: 20px;
   color: #CCCCCC;
 }
-#pageTitleCharsRemain.limit {
+#pageTitleCharsRemain.limit,
+#quickPageTitleCharsRemain.limit {
   color: #e42d2a;
 }
-#pageDescCharsRemain {
+#pageDescCharsRemain,
+#quickPageDescCharsRemain {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -1522,7 +1654,8 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   background-color: #FFFFFF;
   line-height: 20px;
 }
-#pageDescCharsRemain.limit {
+#pageDescCharsRemain.limit,
+#quickPageDescCharsRemain.limit {
   color: #e42d2a;
 }
 #contentArea {
@@ -1601,12 +1734,77 @@ ul.typeAhead > li span.type {
   top: 12px;
   right: 210px;
 }
-@media only screen and (max-width: 1260px) {
-  footer > div > nav > ul {
-    float: none;
-    clear: both;
-  }
+#rightClickMenu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: none;
+  background-color: #fafafa;
+  border: 1px solid #CCCCCC;
+  width: 200px;
+  z-index: 3000;
 }
+#rightClickMenu li:last-child a {
+  border-bottom: 0;
+}
+#rightClickMenu li a {
+  color: #333333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ededed;
+}
+#rightClickMenu li a:hover {
+  background-color: rgba(15, 144, 195, 0.1);
+}
+.md-modal {
+  width: 70%;
+  max-width: 800px;
+  min-width: 300px;
+}
+.md-content {
+  color: #333333;
+  background: #fafafa;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 20px;
+  border: 1px solid #CCCCCC;
+}
+.md-content form {
+  margin-bottom: 10px;
+}
+.md-content nav.controls {
+  text-align: right;
+}
+.md-content h1 {
+  margin-bottom: 20px;
+}
+.md-content button {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+  padding-bottom: 10px;
+}
+.md-content button:focus {
+  outline: none;
+}
+.md-overlay {
+  background: rgba(15, 144, 195, 0.6);
+}
+/*@media only screen and (max-width: 1260px) {
+    footer {
+        > div {
+            > nav {
+                > ul {
+                    float: none;
+                    clear: both;
+                }
+            }
+        }
+    }
+}*/
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
   body {
     font-size: 13px;

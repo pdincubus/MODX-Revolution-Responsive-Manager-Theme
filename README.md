@@ -18,15 +18,18 @@ I started work on a Fireworks PNG file and worked on top of a screenshot of the 
 
 At least, that was the plan.
 
+
 ##OK, fair enough. So what's here then?
 
 Well at the moment, there's the PNG mockup and a bunch of static markup, jQuery, LESS and ideas for what I think would make MODX work and feel better. None of it works, it's just a mockup.
+
 
 ##Feedback and discussion
 
 Whole point is really to get people talking about it I guess. What do you think to the direction I've gone? What's good? What's bad? What's stupid? What's important? What's not? You get where I'm going.
 
 Let's bash heads and come up with somehting a bit more elegant and thought-out.
+
 
 ##TODO
 
@@ -37,3 +40,48 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * Opera testing
 * iPhone/iPad/Android testing
 * Everything else I've not yet written down.
+
+##Stuff I know isn't working quite right
+
+* The modal seems to cause a weird scroll bug sometimes in Chrome on Mac.
+* Looks like CKEditor is having some overlappy issues in places, you can't click the top row of buttons. No idea why and I don't even care because this is just a placeholder RTE and isn't meant to do anything other than appear and look like an RTE.
+
+
+##What is in this thing?
+
+* Adaptive/responsive layout, should work from large desktop all the way down to 320px for iPhones
+* Maximum limited width 1280px. Much wider than this and the user experience is bad. *Bad*
+* Attempt at _consistent_ colours/layout/styles
+    * buttons have three default options: warning/irreversible action (red), information/action (blue), complete/save action type buttons (green)
+    * Uses a bunch of shades of grey (Not quite 50 though), red, green and blue from the MODX logo to keep in feel of brand
+    * Designed to a grid so everything should line up nicely.
+    * Sensible default font sizes and spacing. (Not all elements have size set yet though as I've not used them all in the build at the moment)
+    * NOT helvetica or arial as the default font. Currently set to use Roboto from Google Web Fonts
+    * Since 2.3 dev is using Font Awesome in places, I've tried to consistently use icons for buttons, menu items and wherever else seems appropriate
+    * More obvious published/unpublished/deleted states for resources
+    * More obvious and spacious layout for tree accordion sections - dark background/light foreground makes things more obvious it's a header for a new context/section etc
+    * Added an *actual* footer to the theme. Why is there no footer currently? I've no idea. It kind of needs it so the page feels properly finished
+    * Beginnings of re-organising menus and positions of menus to make them feel more sensibly organised and logical
+    * Modals that use RTE and have same style as actual edit forms
+* Some new ideas
+    * Alerts menu - the MODX error log is very useful. It's just a bit verbose. Sometimes very verbose. Users need a quick overview of important things that aren't working and have been logged. This menu could provide that.
+    * Put nearly everything in a "settings" menu. Users DO NOT need to access MOST functions in MODX. Just show them easily and obviously what they're going to use and put the rest aside for power users who know what they're doing.
+    * LINE THINGS UP!
+    * Tablet and mobile users SHOULD be able to do at least the basics of editing parts of their site. The current manager is so heavy and slow it runs badly a lot of the time on Chrome or Firefox / Windows 8.1 Pro / 16GB RAM / 8-core 4GHz CPU. Really. WTF.
+    * HTML elements
+    * No tag soup where at all possible
+    * Content first. Soon as the header bar is out the way... CONTENT. Tree nav, etc moved to after the content so that it's not in the way for mobile users.
+    * Awesome-bar-search-thing in header and footer.
+    * NO FIXED PANELS. Not even the header. Because:
+        1. iOS doesn't handle fixed positioning all that well.
+        2. We're not trying to create framesets! STOP IT! IT IS NOT The 1990s any more. PEOPLE UNDERSTAND THE CONCEPT OF SCROLLING. The rest of the web does it, why shouldn't the Manager work properly?!
+        3. It's nicer this way.
+        4. Really.
+    * Nicer modal style and animation. Thanks to [this article on Codrops](http://tympanus.net/Development/ModalWindowEffects/)
+    * Page title and description fields warn you when you pass the suggested character limit (70 chars for title, 160 for description)
+    * Styled dropdowns that use proper selects, using jQuery plugin. Can be styled EXACTLY how you want.
+    * Attempted to style checkboxes (works properly in chrome, not in FF - I can fix this using :before or :after and hide the actual checkbox but not had chance yet)
+* Consistent widths for input/select/textarea (50% of block width)
+* Tab nav is now less tabby and more flatly styled
+* Current MODX 2.3 dev build has bad combinations of rounded/square corners, flat/not flat, icons/no icons elements. I've tried to keep everything flat, square and icons where appropriate. Everything should feel like it ties together properly.
+* For mobile sized devices, and those I don't think are big enough for two or three columns, The theme should start to collapse nicely. Menus should get mostly out of the way and the content should appear before the tree nav.

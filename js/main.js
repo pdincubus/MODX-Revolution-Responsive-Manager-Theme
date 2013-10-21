@@ -63,12 +63,23 @@ $(document).ready(function() {
     $('article').find('section').hide().first().show();
 
     //rte for example
-    $('textarea#contentArea').ckeditor();
+    $('textarea#contentArea, textarea#quickContentArea').ckeditor();
 
     //are we needing to hide subnav items because we're on small screen?
     if($(window).width() <= 720) {
         $('header > div > nav > ul > li > ul').hide();
     }
+
+    //bind right click on "home page" to a contextmenu so we can launch a modal window
+    $('.launchContextMenu').bind('contextmenu', function(e){
+        e.preventDefault();
+        $('#rightClickMenu').fadeIn(200);
+        return false;
+    });
+
+    $('body').on('click', function() {
+        $('#rightClickMenu').fadeOut(200);
+    });
 
     //accordion for contexts/templates/files
     $(document).on('click', 'ul.tree > li > nav > h1', function() {
@@ -82,11 +93,11 @@ $(document).ready(function() {
     });
 
     //set char limit on fields
-    $('#pageTitle').on('keyup', function() {
+    $('#pageTitle, #quickPageTitle').on('keyup', function() {
         charLimit(70, $(this));
     });
 
-    $('#pageDescription').on('keyup', function() {
+    $('#pageDescription, #quickPageDescription').on('keyup', function() {
         charLimit(160, $(this));
     });
 
@@ -113,8 +124,7 @@ $(document).ready(function() {
     });
 
     //johns super dropdownatron for the template select
-    //TODO - maybe expand this to all selects?
-    $('#pageStyle').dropdownatron();
+    $('select').dropdownatron();
 
     //on search bar focus show example of type ahead results
     $('.awesomeBar').on({
