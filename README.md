@@ -1,5 +1,7 @@
 #MODX Revolution Manager Re-work and Style
 
+[Demo of current state](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/)
+
 ##WTF, why?
 
 I love MODX, I use it all the time. I wrote a couple of [useful](https://github.com/pdincubus/JSONDerulo) [things](https://github.com/pdincubus/MODX-Revo-Boilerplate) for it and everything.
