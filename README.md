@@ -6,9 +6,9 @@
 
 I love MODX, I use it all the time. I wrote a couple of [useful](https://github.com/pdincubus/JSONDerulo) [things](https://github.com/pdincubus/MODX-Revo-Boilerplate) for it and everything.
 
-Thing is, right. The "Manager" backend is so *slow*. I am running on a machine with 16GB RAM, quad core hyperthreaded CPU and in Firefox it's _still_ slow! What I'm saying is that it's not very unversally friendly.
+Thing is, right. The "Manager" backend is so *slow*. GAH! And to top it off, it's not responsive, adaptive, friendly to use, logically or simply laid out, and it uses EXTjs to lay out everything.
 
-GAH! And to top it off, it's not responsive, adaptive, friendly to use, logically or simply laid out, and it uses EXTjs to lay out everything. It's [tag soup](http://en.wikipedia.org/wiki/Tag_soup) special. It's awful.
+It's [tag soup](http://en.wikipedia.org/wiki/Tag_soup) special. It's awful.
 
 And the worst part is, I really, really *really* want it to work so much better and actually _feel_ like it _works_ well.
 
