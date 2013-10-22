@@ -45,6 +45,7 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * The modal seems to cause a weird scroll bug sometimes in Chrome on Mac.
 * Looks like CKEditor is having some overlappy issues in places, you can't click the top row of buttons. No idea why and I don't even care because this is just a placeholder RTE and isn't meant to do anything other than appear and look like an RTE.
 * The window resize function isn't perfect yet, and scaling from desktop to mobile then back to desktop again can cause you to need to refresh to make menus work. No biggy.
+* There's no way at the moment to access the context menu on touch devices, I'm sure a bit of jQuery can sort that though. Maybe.
 
 
 ##What is in this thing?
