@@ -30,6 +30,16 @@ function dynamicResizer() {
             $(this).toggleClass('active');
             $('header > div > nav').slideToggle(200);
         });
+
+        if(Modernizr.touch || $('html.touch').length) {
+            $('header > div > nav').touchMenuHover({
+                forceiOS: true
+            });
+
+            $('.launchContextMenu').on('touchstart', function() {
+                $('#rightClickMenu').fadeIn(200);
+            });
+        }
     }
 }
 
