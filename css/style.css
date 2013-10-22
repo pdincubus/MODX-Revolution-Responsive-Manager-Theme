@@ -427,7 +427,7 @@ html {
 }
 body {
   color: #333333;
-  background: url(../img/pattern.png) top left repeat;
+  background-color: #FFFFFF;
 }
 #mobNav {
   display: none;
