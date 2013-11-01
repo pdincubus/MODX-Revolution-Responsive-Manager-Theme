@@ -25,6 +25,10 @@ At least, that was the plan.
 
 Well at the moment, there's the PNG mockup and a bunch of static markup, jQuery, LESS and ideas for what I think would make MODX work and feel better. None of it works, it's just a mockup.
 
+To give you a better idea what I mean, see this little comparison of the dev build, parts of the design re-vamp and the current static working mockup:
+
+![visual comparison](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/src/comparison.png "Visual comparison")
+
 
 ##Feedback and discussion
 
