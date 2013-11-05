@@ -176,6 +176,14 @@ Select styles to closely match the text input styles. I don't think the current 
 
 ![Select open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/select-open.png "Select open")
 
+The right click context menu is awesomely useful. Keep it. Do stuff with it.
+
+![Quick edit menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/quick-edit-menu.png "Quick edit menu")
+
+Modal windows should grab attention. The current ones don't so much. Also - why can't you have RTE in quick edit? And why are so many items from full edit missing?!? Let me do stuff!!
+
+![Quick edit modal](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/quick-edit-modal.png "Quick edit modal")
+
 
 ###Mobile stuff
 
