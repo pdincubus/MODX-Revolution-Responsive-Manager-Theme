@@ -113,36 +113,89 @@ Since this is just a static mockup, not everything does something, so here's an 
 
 ###Tree view
 
+I've attempted to keep as much of the tree view as possible familar for existing users. I think the general idea and what's there is not far off to be honest. It just doesn't feel like it all ties together quite right to me.
+
 ![Tree view documents closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-closed.png "Tree view documents closed")
+
 ![Tree view documents open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-open.png "Tree view documents open")
+
 ![Tree view documents open - page over](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-open-page-over.png "Tree view documents open - page over")
+
 ![Tree view templates closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-templates-closed.png "Tree view templates closed")
+
 ![Tree view templates open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-templates-open.png "Tree view templates open")
+
 ![Tree view files open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-files-open.png "Tree view files open")
 
 ###Menus
 
+Since Font Awesome is being introduced in the 2.3 dev builds I decided to use this instead of just using CSS background images for each icon type. I would suggest that even though I think the icons make the menus easier to read at a glance that there should be a system setting in a similar vein to the "Show descriptions in menus" for "Hide icons from menus"
+
+"Apps" would contain links to Package Management and anything that would usually only appear currently under "Components" so that things are logically kept together.
+
 ![Apps menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/apps-menu.png "apps menu")
+
+The 2.3 dev build has a help icon link, I think that an actual menu here is perfect for both new and seasoned MODX users. The premise is simple - is a link useful/important for users? Yes? Stick it in the help menu. That way you don't have to think about where the forums/blog/GitHub repo is etc.
+
 ![Help menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/help-menu.png "help menu")
+
+Everything that is a site setting or configuration menu option should probably be in here, exceptions only really include Media Sources and App related things.
+
 ![Settings menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/settings-menu.png "settings menu")
+
+The error log is really useful, isn't it? So why is it out of the way and formatted so badly? Because only tech peeps need to read it, right? NO! The error log does actually hold a lot of useful information that Manager users might want to know about, such as phpThumb errors. This friendly menu would show x number of recent entries in the log and provide info for users to act upon. No need to wait and check through a MASSIVE error log for a couple of simple errors that users could fix themselves if they were made aware of it!
+
 ![System alerts menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/system-alerts-menu.png "system alerts menu")
+
+Grouping all the user options and logout together, other options might be in here too, such as a Gravatar link (since the Manager is pulling in Gravatar images if the registered email address has one - speaking of which, is there a default profile pic if someone is NOT on Gravatar?)
+
+I've highighted the logout button too. Just because then you don't have to search for it so much.
+
 ![User menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/user-menu-1.png "user menu")
+
 ![User menu logout](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/user-menu-logout.png "user menu - logout")
+
+I quite like the new Firefox "awesome bar" type rip off search box. It's useful, speeds things up and seems to work. More stuff like this. Much more nice stuff please.
+
 ![Search results](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/search-results.png "search results")
+
 
 ###Resource editing
 
+There are sensible limits for things like pagetitle and meta description. Adding something as simple as a counter to these fields shows the user how much SHOULD be there and lets them know when they're at the limit. Simple and pretty obvious.
+
 ![Empty description](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-empty.png "Empty description")
+
 ![Description](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-typed.png "Description")
+
 ![Description too long](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-over.png "Description too long")
+
+Select styles to closely match the text input styles. I don't think the current "up+down" type icon on selects makes much sense. People call selects "drop downs" for a reason. Maybe in that case the icon should point down to denote it opens like that?
+
 ![Select closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/select-closed.png "Select closed")
+
 ![Select open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/select-open.png "Select open")
 
 
 ###Mobile stuff
 
-![Mobile header and nav closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-closed "Mobile header and nav closed")
-![Mobile header and nav open (2)](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open-2 "Mobile header and nav open (2)")
-![Mobile header and nav open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open "Mobile header and nav open")
-![Mobile header and nav](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav "Mobile header and nav")
-![Mobile resource edit](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-resource-edit "Mobile resource edit")
+Ok, there's a lot of people who think the admin area of a site should be accessible to admins wherever they are. Yes, even off a tiddly phone screen. And why shouldn't they? Even if it's not fully featured, why can't the still log in a be able to easily move around the Manager and make changes?
+
+That's right. They should be able to. Here's a quick view of how some of the things in the mock up look when you smoosh the screen size down small. The "resource tree" buggers off to the bottom under the main content area. Sure, it's useful and vital to the site. Maybe I'll move it back above and have a toggle to open/close it. Really though, once I get to the page I want to edit/add I want the editing facilities right up there in my face. IN MY FACE. So they are.
+
+![Mobile resource edit](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-resource-edit.png "Mobile resource edit")
+
+Also, you don't need menus there all the while. Hide that stuff. Get it out of the way. Provide an obvious menu button to get to it though. So here it is.
+
+![Mobile header and nav](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav.png "Mobile header and nav")
+
+![Mobile header and nav closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-closed.png "Mobile header and nav closed")
+
+When it opens, the sub menus are hidden...
+
+![Mobile header and nav open (2)](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open-2.png "Mobile header and nav open (2)")
+
+...until you tap a section to open it.
+
+![Mobile header and nav open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open.png "Mobile header and nav open")
+
