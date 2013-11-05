@@ -1,6 +1,10 @@
 #MODX Revolution Manager Re-work and Style
 
-[Demo of current state](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/)
+##tl;dr
+
+Here's a demo of where I'm currently at: [Demo of current state](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/)
+
+[Jump down the page to see some screenshots](#visual-stuff-like-pictures-and-things-of-stuff) of it with some words about what stuff is and things.
 
 ##WTF, why?
 
