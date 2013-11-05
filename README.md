@@ -27,7 +27,7 @@ Well at the moment, there's the PNG mockup and a bunch of static markup, jQuery,
 
 To give you a better idea what I mean, see this little comparison of the dev build, parts of the design re-vamp and the current static working mockup:
 
-![visual comparison](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/comparison.png "Visual comparison")
+![visual comparison](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/comparison.png "Visual comparison")
 
 
 ##Feedback and discussion
@@ -108,3 +108,41 @@ Since this is just a static mockup, not everything does something, so here's an 
 * None of the menus/dropdowns in the header go anywhere, but they do look nice.
 * Hover over control nav in the sidebar just under the tab nav to see an idea for showing/hiding labels for things
 * Resize your browser window. I've spent a fair bit of time trying to figure out the best way to make the Manager work on smaller screens, tablets and mobiles. The nav collapses completely at mobile size and is opened using a button top right. Sub nav items are opened by tapping the menu item. Fairly obvious really.
+
+##Visual stuff. Like pictures and things of stuff
+
+###Tree view
+
+![Tree view documents closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-closed.png "Tree view documents closed")
+![Tree view documents open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-open.png "Tree view documents open")
+![Tree view documents open - page over](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-documents-open-page-over.png "Tree view documents open - page over")
+![Tree view templates closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-templates-closed.png "Tree view templates closed")
+![Tree view templates open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-templates-open.png "Tree view templates open")
+![Tree view files open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-files-open.png "Tree view files open")
+
+###Menus
+
+![Apps menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/apps-menu.png "apps menu")
+![Help menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/help-menu.png "help menu")
+![Settings menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/settings-menu.png "settings menu")
+![System alerts menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/system-alerts-menu.png "system alerts menu")
+![User menu](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/user-menu-1.png "user menu")
+![User menu logout](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/user-menu-logout.png "user menu - logout")
+![Search results](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/search-results.png "search results")
+
+###Resource editing
+
+![Empty description](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-empty.png "Empty description")
+![Description](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-typed.png "Description")
+![Description too long](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/description-over.png "Description too long")
+![Select closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/select-closed.png "Select closed")
+![Select open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/select-open.png "Select open")
+
+
+###Mobile stuff
+
+![Mobile header and nav closed](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-closed "Mobile header and nav closed")
+![Mobile header and nav open (2)](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open-2 "Mobile header and nav open (2)")
+![Mobile header and nav open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open "Mobile header and nav open")
+![Mobile header and nav](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav "Mobile header and nav")
+![Mobile resource edit](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-resource-edit "Mobile resource edit")
