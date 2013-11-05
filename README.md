@@ -201,9 +201,10 @@ Also, you don't need menus there all the while. Hide that stuff. Get it out of t
 
 When it opens, the sub menus are hidden...
 
-![Mobile header and nav open (2)](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open-2.png "Mobile header and nav open (2)")
+![Mobile header and nav open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open.png "Mobile header and nav open")
 
 ...until you tap a section to open it.
 
-![Mobile header and nav open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open.png "Mobile header and nav open")
+![Mobile header and nav open (2)](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/mobile-header-and-nav-open-2.png "Mobile header and nav open (2)")
+
 
