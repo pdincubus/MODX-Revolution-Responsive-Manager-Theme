@@ -1,0 +1,76 @@
+//----------------------------------------------------
+//                   iPad portrait
+//----------------------------------------------------
+
+@media only screen and (min-width: 731px) and (max-width: 880px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        > div {
+            > form {
+                display: none;
+            }
+
+            > nav {
+                width: (1167/1280)*100%;
+                margin-left: 0;
+
+                > ul {
+                    > li {
+                        &.user {
+                            img {
+                                display: none;
+                            }
+
+                            > ul {
+                                > li {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    nav.tabNav {
+        > ul {
+            > li {
+                > a {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    ul.tree {
+        > li {
+            > nav {
+                h1 {
+                    width: 100%;
+                    font-size: 13px;
+                }
+
+                ul.treeSectionControls {
+                    display: none;
+                }
+            }
+
+            > ul {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    main {
+        article, aside {
+            float: none;
+            clear: both;
+            width: 100%;
+        }
+    }
+}
