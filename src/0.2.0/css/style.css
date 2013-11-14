@@ -1682,6 +1682,9 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 #resourceEdit > nav > ul > li:after {
   clear: both;
 }
+#resourceEdit .buttons {
+  margin-right: 10px;
+}
 #resourceEdit > h1 {
   float: left;
   margin-bottom: 10px;
@@ -1689,46 +1692,76 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   margin-left: 10px;
 }
 #documentSettings,
-#quickEdit {
+#quickEdit,
+#pageExtras,
+#pageSettings,
+#resourceGroups {
   padding: 10px;
   background-color: #F9F9F9;
 }
 #documentSettings form fieldset,
-#quickEdit form fieldset {
+#quickEdit form fieldset,
+#pageExtras form fieldset,
+#pageSettings form fieldset,
+#resourceGroups form fieldset {
   border: 0;
   padding: 0;
   margin: 0;
   width: 47.4025974025974%;
 }
 #documentSettings form fieldset.l,
-#quickEdit form fieldset.l {
+#quickEdit form fieldset.l,
+#pageExtras form fieldset.l,
+#pageSettings form fieldset.l,
+#resourceGroups form fieldset.l {
   float: left;
 }
 #documentSettings form fieldset.r,
-#quickEdit form fieldset.r {
+#quickEdit form fieldset.r,
+#pageExtras form fieldset.r,
+#pageSettings form fieldset.r,
+#resourceGroups form fieldset.r {
   float: right;
 }
 #documentSettings form fieldset.c,
-#quickEdit form fieldset.c {
+#quickEdit form fieldset.c,
+#pageExtras form fieldset.c,
+#pageSettings form fieldset.c,
+#resourceGroups form fieldset.c {
   width: 100%;
   position: relative;
   float: none;
   clear: both;
 }
 #documentSettings form p,
-#quickEdit form p {
+#quickEdit form p,
+#pageExtras form p,
+#pageSettings form p,
+#resourceGroups form p {
   margin-bottom: 20px;
   margin-top: 0;
   position: relative;
 }
 #documentSettings form input,
 #quickEdit form input,
+#pageExtras form input,
+#pageSettings form input,
+#resourceGroups form input,
 #documentSettings form textarea,
 #quickEdit form textarea,
+#pageExtras form textarea,
+#pageSettings form textarea,
+#resourceGroups form textarea,
 #documentSettings form select,
 #quickEdit form select,
+#pageExtras form select,
+#pageSettings form select,
+#resourceGroups form select,
 #documentSettings form .dropdownatron-container,
-#quickEdit form .dropdownatron-container {
+#quickEdit form .dropdownatron-container,
+#pageExtras form .dropdownatron-container,
+#pageSettings form .dropdownatron-container,
+#resourceGroups form .dropdownatron-container {
   height: 40px;
   width: 100%;
   line-height: 23px;
@@ -1746,39 +1779,75 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
 }
 #documentSettings form input:focus,
 #quickEdit form input:focus,
+#pageExtras form input:focus,
+#pageSettings form input:focus,
+#resourceGroups form input:focus,
 #documentSettings form textarea:focus,
 #quickEdit form textarea:focus,
+#pageExtras form textarea:focus,
+#pageSettings form textarea:focus,
+#resourceGroups form textarea:focus,
 #documentSettings form select:focus,
 #quickEdit form select:focus,
+#pageExtras form select:focus,
+#pageSettings form select:focus,
+#resourceGroups form select:focus,
 #documentSettings form .dropdownatron-container:focus,
-#quickEdit form .dropdownatron-container:focus {
+#quickEdit form .dropdownatron-container:focus,
+#pageExtras form .dropdownatron-container:focus,
+#pageSettings form .dropdownatron-container:focus,
+#resourceGroups form .dropdownatron-container:focus {
   border-color: #0f90c3;
   outline: none;
 }
 #documentSettings form input:hover,
 #quickEdit form input:hover,
+#pageExtras form input:hover,
+#pageSettings form input:hover,
+#resourceGroups form input:hover,
 #documentSettings form textarea:hover,
 #quickEdit form textarea:hover,
+#pageExtras form textarea:hover,
+#pageSettings form textarea:hover,
+#resourceGroups form textarea:hover,
 #documentSettings form select:hover,
 #quickEdit form select:hover,
+#pageExtras form select:hover,
+#pageSettings form select:hover,
+#resourceGroups form select:hover,
 #documentSettings form .dropdownatron-container:hover,
-#quickEdit form .dropdownatron-container:hover {
+#quickEdit form .dropdownatron-container:hover,
+#pageExtras form .dropdownatron-container:hover,
+#pageSettings form .dropdownatron-container:hover,
+#resourceGroups form .dropdownatron-container:hover {
   border-color: #999999;
 }
 #documentSettings form .dropdownatron-container:hover .dropdownatron-select,
-#quickEdit form .dropdownatron-container:hover .dropdownatron-select {
+#quickEdit form .dropdownatron-container:hover .dropdownatron-select,
+#pageExtras form .dropdownatron-container:hover .dropdownatron-select,
+#pageSettings form .dropdownatron-container:hover .dropdownatron-select,
+#resourceGroups form .dropdownatron-container:hover .dropdownatron-select {
   color: #333333;
 }
 #documentSettings form .dropdownatron-container.shown .dropdownatron-select:after,
-#quickEdit form .dropdownatron-container.shown .dropdownatron-select:after {
+#quickEdit form .dropdownatron-container.shown .dropdownatron-select:after,
+#pageExtras form .dropdownatron-container.shown .dropdownatron-select:after,
+#pageSettings form .dropdownatron-container.shown .dropdownatron-select:after,
+#resourceGroups form .dropdownatron-container.shown .dropdownatron-select:after {
   content: '';
 }
 #documentSettings form .dropdownatron-selected,
-#quickEdit form .dropdownatron-selected {
+#quickEdit form .dropdownatron-selected,
+#pageExtras form .dropdownatron-selected,
+#pageSettings form .dropdownatron-selected,
+#resourceGroups form .dropdownatron-selected {
   cursor: pointer;
 }
 #documentSettings form .dropdownatron-select,
-#quickEdit form .dropdownatron-select {
+#quickEdit form .dropdownatron-select,
+#pageExtras form .dropdownatron-select,
+#pageSettings form .dropdownatron-select,
+#resourceGroups form .dropdownatron-select {
   position: absolute;
   top: 10px;
   right: 5px;
@@ -1788,7 +1857,10 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   color: #CCCCCC;
 }
 #documentSettings form .dropdownatron-select:after,
-#quickEdit form .dropdownatron-select:after {
+#quickEdit form .dropdownatron-select:after,
+#pageExtras form .dropdownatron-select:after,
+#pageSettings form .dropdownatron-select:after,
+#resourceGroups form .dropdownatron-select:after {
   content: '';
   display: block;
   font-family: 'FontAwesome';
@@ -1796,7 +1868,10 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   line-height: 20px;
 }
 #documentSettings form .dropdownatron-options,
-#quickEdit form .dropdownatron-options {
+#quickEdit form .dropdownatron-options,
+#pageExtras form .dropdownatron-options,
+#pageSettings form .dropdownatron-options,
+#resourceGroups form .dropdownatron-options {
   position: absolute;
   z-index: 5000;
   width: 100%;
@@ -1806,31 +1881,49 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   outline: 1px solid #999999;
 }
 #documentSettings form .dropdownatron-options li,
-#quickEdit form .dropdownatron-options li {
+#quickEdit form .dropdownatron-options li,
+#pageExtras form .dropdownatron-options li,
+#pageSettings form .dropdownatron-options li,
+#resourceGroups form .dropdownatron-options li {
   padding: 10px;
   border-bottom: 1px solid #f2f2f2;
   cursor: pointer;
 }
 #documentSettings form .dropdownatron-options li:last-child,
-#quickEdit form .dropdownatron-options li:last-child {
+#quickEdit form .dropdownatron-options li:last-child,
+#pageExtras form .dropdownatron-options li:last-child,
+#pageSettings form .dropdownatron-options li:last-child,
+#resourceGroups form .dropdownatron-options li:last-child {
   border-bottom: 0;
 }
 #documentSettings form .dropdownatron-options li:hover,
-#quickEdit form .dropdownatron-options li:hover {
+#quickEdit form .dropdownatron-options li:hover,
+#pageExtras form .dropdownatron-options li:hover,
+#pageSettings form .dropdownatron-options li:hover,
+#resourceGroups form .dropdownatron-options li:hover {
   background: #ededed;
 }
 #documentSettings form textarea,
-#quickEdit form textarea {
+#quickEdit form textarea,
+#pageExtras form textarea,
+#pageSettings form textarea,
+#resourceGroups form textarea {
   height: 100px;
   font-size: 14px;
   resize: none;
 }
 #documentSettings form #pageDescription,
-#quickEdit form #pageDescription {
+#quickEdit form #pageDescription,
+#pageExtras form #pageDescription,
+#pageSettings form #pageDescription,
+#resourceGroups form #pageDescription {
   padding-right: 50px;
 }
 #documentSettings form select,
-#quickEdit form select {
+#quickEdit form select,
+#pageExtras form select,
+#pageSettings form select,
+#resourceGroups form select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1841,57 +1934,93 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   position: relative;
 }
 #documentSettings form #pageTitle,
-#quickEdit form #pageTitle {
+#quickEdit form #pageTitle,
+#pageExtras form #pageTitle,
+#pageSettings form #pageTitle,
+#resourceGroups form #pageTitle {
   padding-right: 40px;
 }
 #documentSettings form label,
-#quickEdit form label {
+#quickEdit form label,
+#pageExtras form label,
+#pageSettings form label,
+#resourceGroups form label {
   display: block;
   font-size: 12px;
   line-height: 20px;
   cursor: pointer;
 }
 #documentSettings form .checkboxes,
-#quickEdit form .checkboxes {
+#quickEdit form .checkboxes,
+#pageExtras form .checkboxes,
+#pageSettings form .checkboxes,
+#resourceGroups form .checkboxes {
   *zoom: 1;
   width: 50%;
   float: left;
 }
 #documentSettings form .checkboxes:before,
 #quickEdit form .checkboxes:before,
+#pageExtras form .checkboxes:before,
+#pageSettings form .checkboxes:before,
+#resourceGroups form .checkboxes:before,
 #documentSettings form .checkboxes:after,
-#quickEdit form .checkboxes:after {
+#quickEdit form .checkboxes:after,
+#pageExtras form .checkboxes:after,
+#pageSettings form .checkboxes:after,
+#resourceGroups form .checkboxes:after {
   content: " ";
   display: table;
 }
 #documentSettings form .checkboxes:after,
-#quickEdit form .checkboxes:after {
+#quickEdit form .checkboxes:after,
+#pageExtras form .checkboxes:after,
+#pageSettings form .checkboxes:after,
+#resourceGroups form .checkboxes:after {
   clear: both;
 }
 #documentSettings form .checkboxes p,
-#quickEdit form .checkboxes p {
+#quickEdit form .checkboxes p,
+#pageExtras form .checkboxes p,
+#pageSettings form .checkboxes p,
+#resourceGroups form .checkboxes p {
   *zoom: 1;
   margin-bottom: 10px;
 }
 #documentSettings form .checkboxes p:before,
 #quickEdit form .checkboxes p:before,
+#pageExtras form .checkboxes p:before,
+#pageSettings form .checkboxes p:before,
+#resourceGroups form .checkboxes p:before,
 #documentSettings form .checkboxes p:after,
-#quickEdit form .checkboxes p:after {
+#quickEdit form .checkboxes p:after,
+#pageExtras form .checkboxes p:after,
+#pageSettings form .checkboxes p:after,
+#resourceGroups form .checkboxes p:after {
   content: " ";
   display: table;
 }
 #documentSettings form .checkboxes p:after,
-#quickEdit form .checkboxes p:after {
+#quickEdit form .checkboxes p:after,
+#pageExtras form .checkboxes p:after,
+#pageSettings form .checkboxes p:after,
+#resourceGroups form .checkboxes p:after {
   clear: both;
 }
 #documentSettings form .checkboxes label,
-#quickEdit form .checkboxes label {
+#quickEdit form .checkboxes label,
+#pageExtras form .checkboxes label,
+#pageSettings form .checkboxes label,
+#resourceGroups form .checkboxes label {
   display: inline-block;
   margin-left: 10px;
   font-size: 14px;
 }
 #documentSettings form .checkboxes input[type=checkbox],
-#quickEdit form .checkboxes input[type=checkbox] {
+#quickEdit form .checkboxes input[type=checkbox],
+#pageExtras form .checkboxes input[type=checkbox],
+#pageSettings form .checkboxes input[type=checkbox],
+#resourceGroups form .checkboxes input[type=checkbox] {
   width: 14px;
   height: 14px;
   padding: 0;
@@ -1906,15 +2035,24 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   top: 2px;
 }
 #documentSettings form .checkboxes input[type=checkbox]:focus,
-#quickEdit form .checkboxes input[type=checkbox]:focus {
+#quickEdit form .checkboxes input[type=checkbox]:focus,
+#pageExtras form .checkboxes input[type=checkbox]:focus,
+#pageSettings form .checkboxes input[type=checkbox]:focus,
+#resourceGroups form .checkboxes input[type=checkbox]:focus {
   border-color: #CCCCCC;
 }
 #documentSettings form .checkboxes input[type=checkbox]:checked,
-#quickEdit form .checkboxes input[type=checkbox]:checked {
+#quickEdit form .checkboxes input[type=checkbox]:checked,
+#pageExtras form .checkboxes input[type=checkbox]:checked,
+#pageSettings form .checkboxes input[type=checkbox]:checked,
+#resourceGroups form .checkboxes input[type=checkbox]:checked {
   border-color: #0f90c3;
 }
 #documentSettings form .checkboxes input[type=checkbox]:checked:after,
-#quickEdit form .checkboxes input[type=checkbox]:checked:after {
+#quickEdit form .checkboxes input[type=checkbox]:checked:after,
+#pageExtras form .checkboxes input[type=checkbox]:checked:after,
+#pageSettings form .checkboxes input[type=checkbox]:checked:after,
+#resourceGroups form .checkboxes input[type=checkbox]:checked:after {
   content: '×';
   display: block;
   width: 14px;
@@ -1925,6 +2063,9 @@ ul.tree > li > ul > li > ul > li > ul > li > ul {
   left: 2px;
   line-height: 14px;
   font-size: 14px;
+}
+#quickEdit {
+  padding: 0;
 }
 #pageTitleCharsRemain,
 #quickPageTitleCharsRemain {
@@ -2072,6 +2213,12 @@ ul.typeAhead > li span.type {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+#logOutConfirm {
+  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
+  height: 150px;
+}
 .md-show {
   visibility: visible;
 }
@@ -2117,6 +2264,15 @@ ul.typeAhead > li span.type {
 }
 .md-content .controls {
   text-align: right;
+  *zoom: 1;
+}
+.md-content .controls:before,
+.md-content .controls:after {
+  content: " ";
+  display: table;
+}
+.md-content .controls:after {
+  clear: both;
 }
 .md-content h1 {
   margin-bottom: 20px;
@@ -2164,11 +2320,7 @@ ul.typeAhead > li span.type {
     font-size: 13px;
   }
   header > div > form {
-    display: none;
-  }
-  header > div > nav {
-    width: 92.734375%;
-    margin-left: 0;
+    width: 18.515625%;
   }
   nav.tabNav > ul > li > a {
     padding-left: 10px;
@@ -2347,7 +2499,7 @@ ul.typeAhead > li span.type {
     width: 268px;
   }
   nav.tabNav {
-    height: auto;
+    height: 40px;
   }
   nav.tabNav > ul {
     *zoom: 1;
@@ -2364,9 +2516,8 @@ ul.typeAhead > li span.type {
     padding-left: 10px;
     padding-right: 10px;
   }
-  #documentSettings {
-    padding-left: 0;
-    padding-right: 0;
+  #resourceEdit {
+    padding: 0 10px;
   }
   #documentSettings form .checkboxes label {
     font-size: 13px;
@@ -2397,6 +2548,10 @@ ul.typeAhead > li span.type {
     clear: both;
     width: 100%;
   }
+  #logOutConfirm button {
+    margin-left: 0;
+    margin-right: 10px;
+  }
   footer > div > nav > form {
     width: 268px;
   }
@@ -2408,7 +2563,6 @@ ul.typeAhead > li span.type {
   .button {
     margin-left: 1px;
     float: left;
-    padding: 8px;
   }
   #resourceEdit > nav {
     float: none;

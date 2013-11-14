@@ -74,7 +74,6 @@ module.exports = function(grunt) {
 
         cssmin: {
             options: {
-                banner: '<%= banner %>',
                 stripBanners: true
             },
 
@@ -90,7 +89,6 @@ module.exports = function(grunt) {
 
         less: {
             options: {
-                banner: '<%= banner %>',
                 stripBanners: true
             },
 

@@ -192,7 +192,7 @@
                                 <li><a href="#"><i class="fa fa-cogs"></i> System settings</a></li>
                                 <li><a href="#"><i class="fa fa-user"></i> Users</a></li>
                                 <li><a href="#"><i class="fa fa-bar-chart-o"></i> Reports</a></li>
-                                <li><a href="#"><i class="fa fa-flag"></i> Lexfa</a></li>
+                                <li><a href="#"><i class="fa fa-flag"></i> Lexicon</a></li>
                                 <li><a href="#"><i class="fa fa-sitemap"></i> Contexts</a></li>
                                 <li><a href="#"><i class="fa fa-lock"></i> Remove locks</a></li>
                                 <li><a href="#"><i class="fa fa-key"></i> Flush permissions</a></li>
@@ -211,7 +211,7 @@
                             <ul>
                                 <li><a href="#"><i class="fa fa-pencil"></i> Edit profile</a></li>
                                 <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
-                                <li><a href="#" class="logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="#" class="logout md-trigger" data-modal="logOutConfirm"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -222,7 +222,7 @@
         <main role="main">
             <article>
                 <div id="resourceEdit">
-                    <nav>
+                    <nav class="buttons">
                         <ul>
                             <li>
                                 <a href="#" class="button complete">Save <i class="fa fa-save"></i></a>
@@ -348,6 +348,7 @@
                         </fieldset>
 
                         <fieldset class="c">
+                            <label for="contentArea">Main resource content</label>
                             <textarea id="contentArea" name="contentArea"></textarea>
                         </fieldset>
                     </form>
@@ -805,6 +806,19 @@
                 <nav class="controls">
                     <button class="button complete">Save <i class="fa fa-save"></i></button>
                     <button class="md-close button action">Close <i class="fa fa-times-circle"></i></button>
+                </nav>
+            </div>
+        </div>
+
+        <div class="md-modal md-effect-11" id="logOutConfirm">
+            <div class="md-content">
+                <h1>Are you sure?</h1>
+
+                <h2>Have you saved everything? Are you sure you've saved everything?</h2>
+
+                <nav class="controls">
+                    <button class="button warning">No <i class="fa fa-times-circle"></i></button>
+                    <button class="md-close button action">Logout <i class="fa fa-power-off"></i></button>
                 </nav>
             </div>
         </div>

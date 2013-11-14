@@ -1,4 +1,4 @@
-/*! MODX-Revolution-Responsive-Manager-Theme - v0.2.0 - 2013-11-13
+/*! MODX-Revolution-Responsive-Manager-Theme - v0.2.0 - 2013-11-14
 * Copyright (c) 2013 ; Licensed  */
 /*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery-1.10.2.min.map
@@ -7576,15 +7576,18 @@ $(document).ready(function() {
     });
 
     //johns super dropdownatron for the template select
-    $('select').dropdownatron();
+    $('select').dropdownatron({
+        speed: 200,
+        easing: 'swing'
+    });
 
     //on search bar focus show example of type ahead results
     $('.awesomeBar').on({
         focus: function() {
-            $(this).siblings('ul').slideDown(200);
+            $(this).siblings('ul').fadeIn(200);
         },
         blur:  function() {
-            $(this).siblings('ul').slideUp(200);
+            $(this).siblings('ul').fadeOut(200);
         }
     });
 

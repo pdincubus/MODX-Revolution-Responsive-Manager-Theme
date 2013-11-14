@@ -138,15 +138,18 @@ $(document).ready(function() {
     });
 
     //johns super dropdownatron for the template select
-    $('select').dropdownatron();
+    $('select').dropdownatron({
+        speed: 200,
+        easing: 'swing'
+    });
 
     //on search bar focus show example of type ahead results
     $('.awesomeBar').on({
         focus: function() {
-            $(this).siblings('ul').slideDown(200);
+            $(this).siblings('ul').fadeIn(200);
         },
         blur:  function() {
-            $(this).siblings('ul').slideUp(200);
+            $(this).siblings('ul').fadeOut(200);
         }
     });
 

@@ -921,6 +921,10 @@ ul.tree {
         }
     }
 
+    .buttons {
+        margin-right: 10px;
+    }
+
     > h1 {
         float: left;
         margin-bottom: 10px;
@@ -933,7 +937,7 @@ ul.tree {
 //            resource edit forms
 //----------------------------------------------------
 
-#documentSettings, #quickEdit {
+#documentSettings, #quickEdit, #pageExtras, #pageSettings, #resourceGroups {
     padding: 10px;
     background-color: #F9F9F9;
 
@@ -1133,6 +1137,10 @@ ul.tree {
     }
 }
 
+#quickEdit {
+    padding: 0;
+}
+
 #pageTitleCharsRemain, #quickPageTitleCharsRemain {
     position: absolute;
     bottom: 10px;
@@ -1287,6 +1295,13 @@ ul.typeAhead {
     .translate(-50%, -50%);
 }
 
+#logOutConfirm {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 150px;
+}
+
 .md-show {
     visibility: visible;
 }
@@ -1324,6 +1339,7 @@ ul.typeAhead {
 
     .controls {
         text-align: right;
+        .cf;
     }
 
     h1 {
