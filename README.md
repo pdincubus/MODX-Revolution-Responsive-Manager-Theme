@@ -4,9 +4,15 @@
 
 Mockup working-ish demos:
 
-[Version 0.1](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/1/)
+###Current version
 
 [Version 0.2](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/2/)
+
+[Recent changes](#recent-changes)
+
+###Old versions
+
+[Version 0.1](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/1/)
 
 [Jump down the page to see some screenshots](#visual-stuff-like-pictures-and-things-of-stuff) of it with some words about what stuff is and things.
 
