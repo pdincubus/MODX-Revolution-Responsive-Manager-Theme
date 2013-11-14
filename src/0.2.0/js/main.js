@@ -140,7 +140,8 @@ $(document).ready(function() {
     //johns super dropdownatron for the template select
     $('select').dropdownatron({
         speed: 200,
-        easing: 'swing'
+        easing: 'swing',
+        animation: 'fade'
     });
 
     //on search bar focus show example of type ahead results
