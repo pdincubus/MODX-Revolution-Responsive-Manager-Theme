@@ -63,22 +63,6 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * Changed the entire repo to allow me to utilise Grunt and helps me keep track now it's sort of versioned sensibly. Will allow me/others to easily compare new versions with new on the demo pages
 * Probably other stuff that I can't think of right now!
 
-
-<del>##TODO / Stuff I know isn't working quite right
-
-* <del>Fix dropdownatron to calculate width properly on screen resize/refresh</del>
-* <del>Fix top and bottom menus for mobile devices that can't use the hover menus properly</del>
-* IE testing
-* Windows Firefox/Chrome testing
-* Opera testing
-* iPhone/iPad/Android testing
-* Everything else I've not yet written down.
-* The modal seems to cause a weird scroll bug sometimes in Chrome on Mac.
-* Looks like CKEditor is having some overlappy issues in places, you can't click the top row of buttons. No idea why and I don't even care because this is just a placeholder RTE and isn't meant to do anything other than appear and look like an RTE.
-* The window resize function isn't perfect yet, and scaling from desktop to mobile then back to desktop again can cause you to need to refresh to make menus work. No biggy.
-* There's no way at the moment to access the context menu on touch devices, I'm sure a bit of jQuery can sort that though. Maybe.</del>
-
-
 ##What is in this thing?
 
 * Adaptive/responsive layout, should work from large desktop all the way down to 320px for iPhones
