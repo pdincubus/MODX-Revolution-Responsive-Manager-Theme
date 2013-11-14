@@ -45,7 +45,26 @@ Whole point is really to get people talking about it I guess. What do you think 
 Let's bash heads and come up with somehting a bit more elegant and thought-out.
 
 
-##TODO / Stuff I know isn't working quite right
+##Recent changes
+
+* I've added a basic modal example on the logout link
+* an idea to show new MODX versions in the system alerts menu so you can't miss them
+* added a system info menu idea to the top left MODX logo
+* I spotted some inconsistencies in Font Awesome icons I'd used - fixed those.
+* Upgraded to Font Awesome 4.0.whatever it is, so had to rewrite quite a bit to make that work
+* Mobile tweaks
+* Made the tab navigation in the tree and the content panes more obvious, hover styles more visible
+* Dulled the page bg colour to bring out the content better and make it less distracting
+* Tweaked button sizes so they're less fat and bulky
+* Removed the example RTE - I think everyone knows what one looks like and it was just in the way.
+* Changed most slide animations for fades to match menu styles - also looks a bit better and smoother I think
+* Removed the 'Home' item from the top nav - I don't think it's needed and it's rare for me to EVER look at the dashboard after I've logged in. The dashboard link could be added to either the 'site' menu or inside the 'user' menu where it could be billed less of a landing screen and more of a customisable home screen - have more options of graphs, stats, recent stuff, news, whatever on there.
+* Update the Fireworks PNG file with most of the new stuff in, organised it better, added alongside v0.1 the new v0.2 stuff
+* Changed the entire repo to allow me to utilise Grunt and helps me keep track now it's sort of versioned sensibly. Will allow me/others to easily compare new versions with new on the demo pages
+* Probably other stuff that I can't think of right now!
+
+
+<del>##TODO / Stuff I know isn't working quite right
 
 * <del>Fix dropdownatron to calculate width properly on screen resize/refresh</del>
 * <del>Fix top and bottom menus for mobile devices that can't use the hover menus properly</del>
@@ -57,7 +76,7 @@ Let's bash heads and come up with somehting a bit more elegant and thought-out.
 * The modal seems to cause a weird scroll bug sometimes in Chrome on Mac.
 * Looks like CKEditor is having some overlappy issues in places, you can't click the top row of buttons. No idea why and I don't even care because this is just a placeholder RTE and isn't meant to do anything other than appear and look like an RTE.
 * The window resize function isn't perfect yet, and scaling from desktop to mobile then back to desktop again can cause you to need to refresh to make menus work. No biggy.
-* There's no way at the moment to access the context menu on touch devices, I'm sure a bit of jQuery can sort that though. Maybe.
+* There's no way at the moment to access the context menu on touch devices, I'm sure a bit of jQuery can sort that though. Maybe.</del>
 
 
 ##What is in this thing?
@@ -119,7 +138,14 @@ Since this is just a static mockup, not everything does something, so here's an 
 
 ##Visual stuff. Like pictures and things of stuff
 
-###Tree view
+###Version 0.2
+
+Coming as soon as I get chance to take and fix up some screenshots!
+
+
+###Version 0.1
+
+####Tree view
 
 I've attempted to keep as much of the tree view as possible familar for existing users. I think the general idea and what's there is not far off to be honest. It just doesn't feel like it all ties together quite right to me.
 
@@ -135,7 +161,7 @@ I've attempted to keep as much of the tree view as possible familar for existing
 
 ![Tree view files open](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/tree-view-files-open.png "Tree view files open")
 
-###Menus
+####Menus
 
 Since Font Awesome is being introduced in the 2.3 dev builds I decided to use this instead of just using CSS background images for each icon type. I would suggest that even though I think the icons make the menus easier to read at a glance that there should be a system setting in a similar vein to the "Show descriptions in menus" for "Hide icons from menus"
 
@@ -168,7 +194,7 @@ I quite like the new Firefox "awesome bar" type rip off search box. It's useful,
 ![Search results](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/search-results.png "search results")
 
 
-###Resource editing
+####Resource editing
 
 There are sensible limits for things like pagetitle and meta description. Adding something as simple as a counter to these fields shows the user how much SHOULD be there and lets them know when they're at the limit. Simple and pretty obvious.
 
@@ -193,7 +219,7 @@ Modal windows should grab attention. The current ones don't so much. Also - why 
 ![Quick edit modal](https://github.com/pdincubus/MODX-Revolution-Responsive-Manager-Theme/raw/master/docs/quick-edit-modal.png "Quick edit modal")
 
 
-###Mobile stuff
+####Mobile stuff
 
 Ok, there's a lot of people who think the admin area of a site should be accessible to admins wherever they are. Yes, even off a tiddly phone screen. And why shouldn't they? Even if it's not fully featured, why can't the still log in a be able to easily move around the Manager and make changes?
 
