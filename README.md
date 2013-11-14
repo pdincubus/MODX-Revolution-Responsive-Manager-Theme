@@ -2,7 +2,11 @@
 
 ##tl;dr
 
-Here's a demo of where I'm currently at: [Demo of current state](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/)
+Mockup working-ish demos:
+
+[Version 0.1](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/1/)
+
+[Version 0.2](http://pdincubus.github.io/MODX-Revolution-Responsive-Manager-Theme/2/)
 
 [Jump down the page to see some screenshots](#visual-stuff-like-pictures-and-things-of-stuff) of it with some words about what stuff is and things.
 

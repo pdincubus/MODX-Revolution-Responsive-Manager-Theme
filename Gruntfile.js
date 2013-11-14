@@ -207,7 +207,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-lesslint');
 
-    // Default task.
+    //yes, I get that all but the last line is silly. This is just in case I expand individual tasks to multiple sub tasks or something
     grunt.registerTask('files', ['copy']);
     grunt.registerTask('compile', ['less']);
     grunt.registerTask('lint', ['lesslint']);
