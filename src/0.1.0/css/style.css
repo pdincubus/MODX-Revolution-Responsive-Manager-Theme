@@ -332,7 +332,6 @@ figure {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(/assets/templates/default/js/lib/boxsizing.htc);
 }
 h1,
 h2,

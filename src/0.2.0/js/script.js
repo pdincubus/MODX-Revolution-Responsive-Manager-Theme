@@ -1,4 +1,4 @@
-/*! MODX-Revolution-Responsive-Manager-Theme - v0.2.0 - 2013-11-14
+/*! MODX-Revolution-Responsive-Manager-Theme - v0.2.0 - 2013-11-15
 * Copyright (c) 2013 ; Licensed  */
 /*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery-1.10.2.min.map
